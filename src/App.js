@@ -16,6 +16,9 @@ import Peer_Reviews from "./Pages/Peer_Reviews/Peer_Reviews";
 import Conference from "./Pages/Conference/Conference";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home";
+import Header from "./Pages/Header/Header";
+import  Sidebar from "./Pages/Sidebar/Sidebar";
+import Footer from "./Pages/Footer/Footer";
 
 function App() {
   return (
@@ -37,6 +40,9 @@ function App() {
         <Route path='/peer-review' element={<Peer_Reviews />} />
         <Route path="/conference" element={<Conference />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/footer" element={<Footer />} />
       </Routes>
     </BrowserRouter>
   );
