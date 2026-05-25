@@ -17,7 +17,7 @@ import Conference from "./Pages/Conference/Conference";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
-import  Sidebar from "./Pages/Sidebar/Sidebar";
+import  ProfessorCard from "./Pages/ProfessionalCard/ProfessorCard";
 import Footer from "./Pages/Footer/Footer";
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
         <Route path='/peer-review' element={<Peer_Reviews />} />
         <Route path="/conference" element={<Conference />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/professor-card" element={<ProfessorCard />} />
         <Route path="/header" element={<Header />} />
         <Route path="/footer" element={<Footer />} />
       </Routes>

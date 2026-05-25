@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
     return(
-        <div className=" text-amber-800 text-xl font-bold">
-            Footer
+        <div className="  text-xl bg-gray-200">
+            © 2026 Mayeso Lazaro. All rights reserved. 
         </div>
     )
 }
