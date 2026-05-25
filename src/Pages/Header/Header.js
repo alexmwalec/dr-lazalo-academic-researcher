@@ -33,7 +33,7 @@ const Header = () => {
           </Link>
 
           <Link to="/grants" className="hover:text-rose-700">
-            Grants
+            Supervision
           </Link>
 
           <Link to="/outreach" className="hover:text-rose-700">
