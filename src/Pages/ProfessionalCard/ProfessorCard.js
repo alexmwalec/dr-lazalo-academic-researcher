@@ -3,6 +3,7 @@ import {
   FaTwitter,
   FaResearchgate,
   FaGoogleScholar,
+  FaGlobe
 } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
 
@@ -13,7 +14,7 @@ export default function ProfessorCard() {
       <div className="p-2">
         <img
           src="/profile.jpg"
-          alt="Mayeso Lazalo"
+          alt=""
           className="w-full h-auto object-cover"
         />
       </div>
@@ -46,7 +47,7 @@ export default function ProfessorCard() {
         {/* Links */}
         <div className="mt-8 space-y-4">
           <a
-            href="#"
+            href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
             className="flex items-center gap-3 text-red-700 hover:underline"
           >
             <SiGooglescholar className="text-gray-500" />
@@ -54,7 +55,7 @@ export default function ProfessorCard() {
           </a>
 
           <a
-            href="#"
+            href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
             className="flex items-center gap-3 text-red-700 hover:underline"
           >
             <FaResearchgate className="text-gray-500" />
@@ -62,7 +63,7 @@ export default function ProfessorCard() {
           </a>
 
           <a
-            href="#"
+            href="https://orcid.org/0000-0001-5314-0638"
             className="flex items-center gap-3 text-red-700 hover:underline"
           >
             <SiOrcid className="text-gray-500" />
@@ -70,7 +71,7 @@ export default function ProfessorCard() {
           </a>
 
           <a
-           href="https://www.webofscience.com"
+           href="https://www.webofscience.com/wos/author/record/PYY-0010-2026"
            target="_blank"
            rel="noopener noreferrer"
           className="flex items-center gap-3 text-red-700 hover:underline"
@@ -81,19 +82,19 @@ export default function ProfessorCard() {
                <span>Web of Science</span>
             </a>
           <a
-            href="#"
-            className="flex items-center gap-3 text-red-700 hover:underline"
-          >
-            <FaTwitter className="text-gray-500" />
-            <span>Twitter</span>
-          </a>
-
-          <a
-            href="#"
+            href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
             className="flex items-center gap-3 text-red-700 hover:underline"
           >
             <FaLinkedinIn className="text-gray-500" />
             <span>LinkedIn</span>
+          </a>
+
+           <a
+            href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+            className="flex items-center gap-3 text-red-700 hover:underline"
+          >
+            <FaGlobe className="text-gray-500" />
+            <span>Institutional Web Page</span>
           </a>
         </div>
       </div>
