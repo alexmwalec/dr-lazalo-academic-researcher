@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { trainingData } from "./trainingData";
+import humanity from "../../Images/humanity.jpg"; 
 
 import {
   FaLinkedinIn,
