@@ -8,7 +8,7 @@ import Grants from "./Pages/Grants/Grants"
 import Projects from "./Pages/Projects/Projects";
 import Outreach from "./Pages/Outreach/Outreach";
 import Trainings from "./Pages/Trainings/Trainings";
-import Research  from "./Pages/Research/Research";
+import Research  from "./Pages/Publications/Research/Research";
 import BoardMembership from "./Pages/BoardMembership/BoardMemberShip";
 import Teaching from "./Pages/Teaching/Teaching";
 import Role from  "./Pages/Role/Role";
