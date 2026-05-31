@@ -32,7 +32,7 @@ const Header = () => {
             Awards
           </Link>
 
-          <Link to="/grants" className="hover:text-rose-700">
+          <Link to="/supervision" className="hover:text-rose-700">
             Supervision
           </Link>
 

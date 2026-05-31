@@ -16,11 +16,14 @@ import Peer_Reviews from "./Pages/Peer_Reviews/Peer_Reviews";
 import Conference from "./Pages/Conference/Conference";
 import Blogs from "./Pages/Blogs/Blogs";
 import consultancyData from "./Pages/Consultancy/consultancyData";
+import Supervision from './Pages/Supervision/Supervision';
 import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
 import { peerReviewData } from './Pages/Peer_Reviews/peerReviewData';
 import  ProfessorCard from "./Pages/ProfessionalCard/ProfessorCard";
 import { membershipData } from './Pages/BoardMembership/membershipData';
+import { conferenceData } from './Pages/Conference/conferenceData';
+import { publicationsData } from './Pages/Publications/publicationsData';
 import Footer from "./Pages/Footer/Footer";
 
 function App() {
@@ -46,7 +49,10 @@ function App() {
         <Route path="/professor-card" element={<ProfessorCard />} />
         <Route path="/consultancy-data" element={<consultancyData />} />
         <Route path="/peer-review-data" element={<peerReviewData />} />
+        <Route path="/supervision" element={<Supervision />} />
         <Route path="/membership-data" element={<membershipData />} />
+        <Route path="/conference-data" element={<conferenceData />} />
+        <Route path="/publication-data" element={<publicationsData />} />
         <Route path="/header" element={<Header />} />
         <Route path="/footer" element={<Footer />} />
         
