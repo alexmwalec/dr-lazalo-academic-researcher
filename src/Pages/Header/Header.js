@@ -41,7 +41,7 @@ const Header = () => {
           </Link>
 
           <Link to="/editorial" className="hover:text-rose-700">
-            Editorial
+            Editorial Roles
           </Link>
 
           <Link to="/research" className="hover:text-rose-700">
@@ -49,27 +49,18 @@ const Header = () => {
           </Link>
 
           <Link to="/board-membership" className="hover:text-rose-700">
-            Board Duties
+            Board Membership
           </Link>
 
           <Link to="/teaching" className="hover:text-rose-700">
             Teaching
           </Link>
-
-          <Link to="/role" className="hover:text-rose-700">
-            Roles
-          </Link>
-
           <Link to="/peer-review" className="hover:text-rose-700">
             Peer Reviews
           </Link>
 
           <Link to="/conference" className="hover:text-rose-700">
-            Conferences
-          </Link>
-
-          <Link to="/blogs" className="hover:text-rose-700">
-            Blogs
+            Conference Contribution
           </Link>
 
           <Link to="/education" className="hover:text-rose-700">

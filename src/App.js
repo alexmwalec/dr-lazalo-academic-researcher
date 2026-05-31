@@ -15,9 +15,12 @@ import Role from  "./Pages/Role/Role";
 import Peer_Reviews from "./Pages/Peer_Reviews/Peer_Reviews";
 import Conference from "./Pages/Conference/Conference";
 import Blogs from "./Pages/Blogs/Blogs";
+import consultancyData from "./Pages/Consultancy/consultancyData";
 import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
+import { peerReviewData } from './Pages/Peer_Reviews/peerReviewData';
 import  ProfessorCard from "./Pages/ProfessionalCard/ProfessorCard";
+import { membershipData } from './Pages/BoardMembership/membershipData';
 import Footer from "./Pages/Footer/Footer";
 
 function App() {
@@ -41,8 +44,12 @@ function App() {
         <Route path="/conference" element={<Conference />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/professor-card" element={<ProfessorCard />} />
+        <Route path="/consultancy-data" element={<consultancyData />} />
+        <Route path="/peer-review-data" element={<peerReviewData />} />
+        <Route path="/membership-data" element={<membershipData />} />
         <Route path="/header" element={<Header />} />
         <Route path="/footer" element={<Footer />} />
+        
       </Routes>
     </BrowserRouter>
   );
