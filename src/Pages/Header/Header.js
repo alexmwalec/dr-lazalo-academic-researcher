@@ -44,10 +44,6 @@ const Header = () => {
             Trainings
           </Link>
 
-          <Link to="/research" className="hover:text-rose-700">
-            Research
-          </Link>
-
           <Link to="/board-membership" className="hover:text-rose-700">
             Board Membership
           </Link>
