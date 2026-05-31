@@ -44,7 +44,7 @@ const Publications = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#efefef]">
+    <div className="min-h-screen bg-slate-100">
       <Header />
 
       {/* Banner */}

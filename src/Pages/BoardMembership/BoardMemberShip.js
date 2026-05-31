@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
 import { membershipData } from "./membershipData";
+import humanity from "../../Images/humanity.jpg";
 
 const BoardMembership = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,25 +38,31 @@ const BoardMembership = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#efefef]">
+    <div className="min-h-screen bg-slate-100">
       <Header />
+ {/* Banner */}
+   <div className="relative h-[330px]">
+  <img
+    src={humanity}
+    alt="Academic Research Banner"
+    className="w-full h-full object-cover"
+  />
 
-      <div
-        className="h-[330px] bg-cover bg-center"
-        style={{
-          backgroundImage: `url('/banner.jpg')`,
-        }}
-      />
+  <div className="absolute inset-0 bg-black/20" />
+</div>
 
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col lg:flex-row gap-16">
+  {/* Content */}
+  <div className="max-w-7xl mx-auto px-8">
+    <div className="flex flex-col lg:flex-row gap-16">
 
-           <aside className="w-full lg:w-[280px] -mt-24">
-                  <img
-                    src="/profile.jpg"
-                    alt="Mayeso Lazaro"
-                    className="w-[220px] border-4 border-white shadow-sm"
-                  />
+      {/* LEFT SIDEBAR - CHANGED: Profile image now circular with white border and overlaps banner */}
+      <aside className="w-full lg:w-[280px] -mt-24">
+        {/* CHANGED: Added rounded-full for circular shape, object-cover, h-48 w-48, mx-auto on mobile */}
+        <img
+          src="/profile.jpg"
+          alt="Mayeso Lazaro"
+          className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
+        />
           
                   <div className="mt-5">
                     <h2 className="text-[22px] font-bold leading-tight">

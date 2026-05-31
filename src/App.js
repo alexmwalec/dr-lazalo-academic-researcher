@@ -24,6 +24,7 @@ import  ProfessorCard from "./Pages/ProfessionalCard/ProfessorCard";
 import { membershipData } from './Pages/BoardMembership/membershipData';
 import { conferenceData } from './Pages/Conference/conferenceData';
 import { publicationsData } from './Pages/Publications/publicationsData';
+import { trainingsData } from './Pages/Trainings/trainingData';
 import Footer from "./Pages/Footer/Footer";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <Route path="/membership-data" element={<membershipData />} />
         <Route path="/conference-data" element={<conferenceData />} />
         <Route path="/publication-data" element={<publicationsData />} />
+        <Route path="/training-data" element={<trainingsData />} />
         <Route path="/header" element={<Header />} />
         <Route path="/footer" element={<Footer />} />
         

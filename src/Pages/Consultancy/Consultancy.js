@@ -54,7 +54,7 @@ const Consultancy = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#efefef]">
+    <div className="min-h-screen bg-slate-100">
       <Header />
 
       {/* Banner */}
@@ -168,7 +168,7 @@ const Consultancy = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-12">
-            <h1 className="text-5xl font-bold text-[#b44343] mb-4">
+            <h1 className="text-3xl font-bold  mb-4">
               Consultancy
             </h1>
 
@@ -202,7 +202,7 @@ const Consultancy = () => {
               {currentItems.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 shadow-sm border "
+                  className="p-6 shadow-sm  "
                 >
                   <h2 className="text-xl font-semibold text-[#b44343] mb-3">
                     {item.title}

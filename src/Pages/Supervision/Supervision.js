@@ -128,28 +128,32 @@ const Supervision = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#efefef]">
+    <div className="min-h-screen bg-slate-100">
       <Header />
+ {/* Banner */}
+   <div className="relative h-[330px]">
+  <img
+    src={humanity}
+    alt="Academic Research Banner"
+    className="w-full h-full object-cover"
+  />
 
-      {/* Banner */}
-      <div
-        className="h-[330px] bg-cover bg-center"
-        style={{ backgroundImage: `url('/banner.jpg')` }}
-      />
+  <div className="absolute inset-0 bg-black/20" />
+</div>
 
-      {/* CONTENT */}
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col lg:flex-row gap-16">
+  {/* Content */}
+  <div className="max-w-7xl mx-auto px-8">
+    <div className="flex flex-col lg:flex-row gap-16">
 
-         <aside className="w-full lg:w-[280px] -mt-24">
-                          <img
-                            src="/profile.jpg"
-                            alt="Mayeso Lazaro"
-                            className="w-[220px] border-4 border-white shadow-sm"
-                          />
+      <aside className="w-full lg:w-[280px] -mt-24">
+        <img
+          src="/profile.jpg"
+          alt="Mayeso Lazaro"
+          className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
+        />
                   
                           <div className="mt-5">
-                            <h2 className="text-[22px] font-bold leading-tight">
+                          <h2 className="text-[22px] font-bold leading-tight">
                               Mayeso Lazaro
                             </h2>
                   
