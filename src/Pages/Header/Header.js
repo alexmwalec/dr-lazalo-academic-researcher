@@ -40,8 +40,8 @@ const Header = () => {
             Outreach
           </Link>
 
-          <Link to="/editorial" className="hover:text-rose-700">
-            Editorial Roles
+          <Link to="/trainings" className="hover:text-rose-700">
+            Trainings
           </Link>
 
           <Link to="/research" className="hover:text-rose-700">

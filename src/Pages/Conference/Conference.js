@@ -117,7 +117,6 @@ const Conference = () => {
             </div>
           </aside>
 
-          {/* MAIN CONTENT (UNCHANGED LOGIC) */}
           <main className="flex-1 py-12">
 
             <h1 className="text-3xl font-bold  mb-4">

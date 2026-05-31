@@ -7,7 +7,7 @@ import Constultancy from "./Pages/Consultancy/Consultancy";
 import Grants from "./Pages/Grants/Grants"
 import Projects from "./Pages/Projects/Projects";
 import Outreach from "./Pages/Outreach/Outreach";
-import Editorial from "./Pages/Editorial/Editorial";
+import Trainings from "./Pages/Trainings/Trainings";
 import Research  from "./Pages/Research/Research";
 import BoardMembership from "./Pages/BoardMembership/BoardMemberShip";
 import Teaching from "./Pages/Teaching/Teaching";
@@ -38,7 +38,7 @@ function App() {
         <Route path="/grants" element={<Grants />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/outreach" element={<Outreach />} />
-        <Route path="/editorial" element={<Editorial />} />
+        <Route path="/trainings" element={<Trainings />} />
         <Route path="/research" element={<Research />} />
         <Route path="/board-membership" element={<BoardMembership />} />
         <Route path="/teaching" element={<Teaching />} />
