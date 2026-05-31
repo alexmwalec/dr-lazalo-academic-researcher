@@ -49,7 +49,7 @@ const Publications = () => {
       <Header />
 
       {/* Banner */}
-        <div className="relative h-[330px]">
+<div className="relative h-[330px]">
   <img
     src={humanity}
     alt="Academic Research Banner"

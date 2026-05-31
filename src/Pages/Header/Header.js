@@ -63,7 +63,7 @@ const Header = () => {
             Conference Contribution
           </Link>
 
-          <Link to="/education" className="hover:text-rose-700">
+          <Link to="/contact" className="hover:text-rose-700">
             Contact
           </Link>
         </nav>

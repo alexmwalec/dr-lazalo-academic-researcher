@@ -4,6 +4,7 @@ import Awards from './Pages/Awards/awards';
 import Publications from './Pages/Publications/Publications';
 import Education from './Pages/Education/Education';
 import Constultancy from "./Pages/Consultancy/Consultancy";
+import Contact from './Pages/Contact/Contact';
 import Grants from "./Pages/Grants/Grants"
 import Projects from "./Pages/Projects/Projects";
 import Outreach from "./Pages/Outreach/Outreach";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/consultancy" element={<Constultancy />} />
         <Route path="/grants" element={<Grants />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/outreach" element={<Outreach />} />
         <Route path="/trainings" element={<Trainings />} />
         <Route path="/research" element={<Research />} />
