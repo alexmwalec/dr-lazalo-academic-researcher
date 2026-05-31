@@ -41,35 +41,27 @@ const Contact = () => {
           className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
         />
 
-            <div className="mt-6">
-              <h2 className="text-[24px] font-bold">
-                Mayeso Lazaro
-              </h2>
+          <div className="mt-5">
+          <h2 className="text-[22px] font-bold leading-tight">
+            Mayeso Lazaro
+          </h2>
 
-              <p className="text-gray-600 mt-1">
-                Senior Lecturer, Researcher and
-                Evaluation Consultant
-              </p>
+          <p className="text-gray-700 mt-1">
+            Senior Lecturer, Researcher and Evaluation Consultant
+          </p>
 
-              <div className="mt-8 space-y-4">
+          <a
+            href="mailto:mlazaro@unima.ac.mw"
+            className="block mt-8 text-[#b44343] underline"
+          >
+            mlazaro@unima.ac.mw
+          </a>
 
-                <div className="flex items-start gap-3">
-                  <FaEnvelope className="mt-1 text-[#b44343]" />
-                  <span>mlazaro@unima.ac.mw</span>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <FaMapMarkerAlt className="mt-1 text-[#b44343]" />
-                  <span>
-                    Department of Human Ecology
-                    <br />
-                    University of Malawi
-                    <br />
-                    Zomba, Malawi
-                  </span>
-                </div>
-
-              </div>
+          <div className="mt-8 text-gray-700 leading-relaxed">
+            Department of Human Ecology
+            <br />
+            University of Malawi
+          </div>
 
               <div className="mt-10 space-y-3">
 
