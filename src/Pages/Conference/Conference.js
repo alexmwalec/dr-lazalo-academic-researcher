@@ -1,8 +1,10 @@
-// src/Pages/ConferencePresentations/Conference.jsx
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { conferenceData } from "./conferenceData";
+import { FaLinkedinIn, FaTwitter, FaResearchgate, FaGoogleScholar, FaGlobe } from "react-icons/fa";
+import { SiOrcid, SiGooglescholar } from "react-icons/si";
+import humanity from "../../Images/humanity.jpg";
 
 const Conference = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -61,60 +63,73 @@ const Conference = () => {
               </div>
 
               <div className="mt-8 space-y-3">
-
-                <a
-                  href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b44343] underline block"
-                >
-                  Google Scholar
-                </a>
-
-                <a
-                  href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b44343] underline block"
-                >
-                  ResearchGate
-                </a>
-
-                <a
-                  href="https://orcid.org/0000-0001-5314-0638"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b44343] underline block"
-                >
-                  ORCID
-                </a>
-
-                <a
-                  href="https://www.webofscience.com/wos/author/record/PYY-0010-2026"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b44343] underline block"
-                >
-                  Web of Science
-                </a>
-
-                <a
-                  href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b44343] underline block"
-                >
-                  LinkedIn
-                </a>
-
-                <a
-                  href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#b44343] underline block"
-                >
-                  Institutional Web Page
-                </a>
+                                   {/* Google Scholar */}
+                                   <a
+                                     href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                     className="flex items-center gap-3 text-[#b44343] underline"
+                                   >
+                                     <SiGooglescholar className="text-gray-400" />
+                                     Google Scholar
+                                   </a>
+                       
+                                   {/* ResearchGate */}
+                                   <a
+                                     href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="flex items-center gap-3 text-[#b44343] underline"
+                                   >
+                                     <FaResearchgate className="text-gray-400 "/>
+                                     ResearchGate
+                                   </a>
+                       
+                                   {/* ORCID */}
+                                   <a
+                                     href="https://orcid.org/0000-0001-5314-0638"
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="flex items-center gap-3 text-[#b44343] underline"
+                                   >
+                                     <SiOrcid className="text-gray-400 " />
+                                     ORCID
+                                   </a>
+                       
+                                   {/* Web of Science */}
+                                   <a
+                                     href="https://www.webofscience.com/wos/author/record/PYY-0010-2026"
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="flex items-center gap-3 text-[#b44343] underline"
+                                   >
+                                     <div className="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center text-[10px] font-bold text-gray-500">
+                                       W
+                                     </div>
+                                     Web of Science
+                                   </a>
+                       
+                                   {/* LinkedIn */}
+                                   <a
+                                     href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="flex items-center gap-3 text-[#b44343] underline"
+                                   >
+                                     <FaLinkedinIn className="text-gray-400 " />
+                                     LinkedIn
+                                   </a>
+                       
+                                   {/* Website */}
+                                   <a
+                                     href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="flex items-center gap-3 text-[#b44343] underline"
+                                   >
+                                     <FaGlobe className="text-gray-400" />
+                                     Institutional Web Page
+                                   </a>
 
               </div>
             </div>
