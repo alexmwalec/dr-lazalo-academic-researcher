@@ -9,6 +9,7 @@ import {
   FaGlobe
 } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
+import humanity from "../../Images/humanity.jpg";
 
 const supervisionData = [
   {
@@ -252,7 +253,7 @@ const Supervision = () => {
               Student Supervision
             </h1>
 
-            <p className="text-gray-700 mb-10">
+            <p className="text-gray-700 mb-10 text-lg">
               Undergraduate, postgraduate supervision and external examination records.
             </p>
 
