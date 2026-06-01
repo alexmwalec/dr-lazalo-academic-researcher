@@ -11,11 +11,12 @@ import {
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
 import { membershipData } from "./membershipData";
 import humanity from "../../Images/humanity.jpg";
+import SocialShareBar from "../SocialShareBar/SocialShareBar";
 
 const BoardMembership = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const itemsPerPage = 7;
+  const itemsPerPage = 8;
 
   const totalPages = Math.ceil(
     membershipData.length / itemsPerPage
@@ -245,6 +246,7 @@ const BoardMembership = () => {
             </div>
           </main>
         </div>
+        <SocialShareBar title="Memberships, Boards & Associations - Mayeso Lazaro" />
       </div>
 
       <Footer />
