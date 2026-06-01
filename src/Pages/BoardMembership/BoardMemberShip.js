@@ -246,7 +246,6 @@ const BoardMembership = () => {
             </div>
           </main>
         </div>
-        <SocialShareBar title="Memberships, Boards & Associations - Mayeso Lazaro" />
       </div>
 
       <Footer />

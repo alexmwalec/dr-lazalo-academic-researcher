@@ -227,7 +227,6 @@ const Projects = () => {
   </div>
 </main>
     </div>
-    <SocialShareBar title="Projects & Grants - Mayeso Lazaro" />
   </div>
   <Footer/>
 </div>

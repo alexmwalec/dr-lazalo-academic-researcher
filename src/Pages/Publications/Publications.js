@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { publicationsData } from "./publicationsData";
 import humanity from "../../Images/humanity.jpg";
-
+import SocialShareBar from "../SocialShareBar/SocialShareBar";
 import {
   FaLinkedinIn,
   FaResearchgate,
@@ -326,8 +326,8 @@ const Publications = () => {
 
           </main>
         </div>
-      </div>
-
+       </div>
+       
       <Footer />
     </div>
   );
