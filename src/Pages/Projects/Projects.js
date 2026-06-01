@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer"
 import { SiGooglescholar, SiOrcid } from "react-icons/si";
 import { FaResearchgate, FaLinkedinIn, FaGlobe } from "react-icons/fa";
 import humanity from "../../Images/humanity.jpg";
+import SocialShareBar from "../SocialShareBar/SocialShareBar";
 
 const Projects = () => {
   return (
@@ -226,9 +227,11 @@ const Projects = () => {
   </div>
 </main>
     </div>
+    <SocialShareBar title="Projects & Grants - Mayeso Lazaro" />
   </div>
   <Footer/>
 </div>
+ 
   );
 };
 

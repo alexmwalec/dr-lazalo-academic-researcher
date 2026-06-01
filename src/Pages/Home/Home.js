@@ -199,11 +199,14 @@ const Home = () => {
             systems strengthening in collaboration with UNICEF, USAID and
             other international partners.
           </p>
+          <br/>
+          <span className=" text-black font-bold"> CV </span>
         </div>
       </main>
     </div>
-    <Footer/>
+   
   </div>
+   <Footer />
 </div>
   );
 };
