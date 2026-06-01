@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
@@ -6,62 +6,128 @@ import {
   FaLinkedinIn,
   FaResearchgate,
   FaGlobe,
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhone,
 } from "react-icons/fa";
 
-import { SiOrcid, SiGooglescholar } from "react-icons/si";
+import {
+  SiOrcid,
+  SiGooglescholar,
+} from "react-icons/si";
 
 import humanity from "../../Images/humanity.jpg";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "http://localhost:5000/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type":
+              "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(
+          data.message ||
+            "Failed to send message"
+        );
+      }
+    } catch (error) {
+      console.error(error);
+
+      alert(
+        "Server error. Please try again."
+      );
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen bg-[#efefef]">
       <Header />
 
+      {/* Banner */}
       <div className="relative h-[330px]">
-  <img
-    src={humanity}
-    alt="Academic Research Banner"
-    className="w-full h-full object-cover"
-  />
-
-  <div className="absolute inset-0 bg-black/20" />
-</div>
-
-  {/* Content */}
-  <div className="max-w-7xl mx-auto px-8">
-    <div className="flex flex-col lg:flex-row gap-16">
-
-      <aside className="w-full lg:w-[280px] -mt-24">
         <img
-          src="/profile.jpg"
-          alt="Mayeso Lazaro"
-          className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
+          src={humanity}
+          alt="Academic Research Banner"
+          className="w-full h-full object-cover"
         />
 
-          <div className="mt-5">
-          <h2 className="text-[22px] font-bold leading-tight">
-            Mayeso Lazaro
-          </h2>
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
-          <p className="text-gray-700 mt-1">
-            Senior Lecturer, Researcher and Evaluation Consultant
-          </p>
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex flex-col lg:flex-row gap-16">
 
-          <a
-            href="mailto:mlazaro@unima.ac.mw"
-            className="block mt-8 text-[#b44343] underline"
-          >
-            mlazaro@unima.ac.mw
-          </a>
+          {/* Sidebar */}
+          <aside className="w-full lg:w-[280px] -mt-24">
 
-          <div className="mt-8 text-gray-700 leading-relaxed">
-            Department of Human Ecology
-            <br />
-            University of Malawi
-          </div>
+            <img
+              src="/profile.jpg"
+              alt="Mayeso Lazaro"
+              className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
+            />
+
+            <div className="mt-5">
+              <h2 className="text-[22px] font-bold leading-tight">
+                Mayeso Lazaro
+              </h2>
+
+              <p className="text-gray-700 mt-1">
+                Senior Lecturer, Researcher and
+                Evaluation Consultant
+              </p>
+
+              <a
+                href="mailto:mlazaro@unima.ac.mw"
+                className="block mt-8 text-[#b44343] underline"
+              >
+                mlazaro@unima.ac.mw
+              </a>
+
+              <div className="mt-8 text-gray-700 leading-relaxed">
+                Department of Human Ecology
+                <br />
+                University of Malawi
+              </div>
 
               <div className="mt-10 space-y-3">
 
@@ -119,23 +185,28 @@ const Contact = () => {
             </div>
           </aside>
 
-          {/* MAIN CONTENT */}
+          {/* Main Content */}
           <main className="flex-1 py-12">
 
             <div className="bg-white shadow-sm p-8 rounded-xl">
 
-              <h2 className="text-3xl font-bold mb-6">
-                Get in Touch
-              </h2>
+              <h1 className="text-3xl font-bold mb-6">
+                Contact
+              </h1>
 
               <p className="text-gray-700 mb-8 leading-relaxed">
-                I welcome opportunities for collaborative
-                research, consultancy assignments, conference
-                presentations, supervision, grant partnerships,
+                I welcome opportunities for
+                collaborative research,
+                consultancy assignments,
+                conference presentations,
+                supervision, grant partnerships,
                 and academic engagements.
               </p>
 
-              <form className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
 
                 <div>
                   <label className="block font-medium mb-2">
@@ -144,6 +215,10 @@ const Contact = () => {
 
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="
                       w-full
                       border
@@ -164,6 +239,10 @@ const Contact = () => {
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="
                       w-full
                       border
@@ -184,6 +263,10 @@ const Contact = () => {
 
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
                     className="
                       w-full
                       border
@@ -204,6 +287,10 @@ const Contact = () => {
 
                   <textarea
                     rows="6"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     className="
                       w-full
                       border
@@ -219,6 +306,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="
                     bg-[#b44343]
                     text-white
@@ -227,9 +315,12 @@ const Contact = () => {
                     rounded-lg
                     hover:bg-[#993636]
                     transition
+                    disabled:opacity-50
                   "
                 >
-                  Send Message
+                  {loading
+                    ? "Sending..."
+                    : "Send Message"}
                 </button>
 
               </form>
@@ -237,6 +328,7 @@ const Contact = () => {
 
             {/* Research Interests */}
             <div className="mt-12 bg-white p-8 rounded-xl shadow-sm">
+
               <h3 className="text-2xl font-bold mb-4">
                 Research Interests
               </h3>
