@@ -26,25 +26,18 @@ app.post("/contact", async (req, res) => {
       message,
     } = req.body;
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.OWNER_EMAIL,
-      replyTo: email,
-      subject: `[Website Contact] ${subject}`,
-      html: `
-        <h2>New Website Message</h2>
+   await transporter.sendMail({
+  replyTo: email,
+  to: "mayesolazaro1@gmail.com",
+  subject: `Website Contact: ${subject}`,
 
-        <p><strong>Name:</strong> ${name}</p>
+  text: `
 
-        <p><strong>Email:</strong> ${email}</p>
 
-        <p><strong>Subject:</strong> ${subject}</p>
-
-        <hr/>
-
-        <p>${message}</p>
-      `,
-    });
+Message:
+${message}
+`,
+});
 
     res.status(200).json({
       success: true,

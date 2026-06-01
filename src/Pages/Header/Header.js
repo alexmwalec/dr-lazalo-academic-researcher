@@ -9,9 +9,9 @@ const Header = () => {
         {/* Name / Logo */}
         <Link
           to="/"
-          className="text-xl font-bold text-gray-900 whitespace-nowrap hover:text-rose-700"
+          className="text-xl font-bold text-gray-900 uppercase whitespace-nowrap hover:text-rose-700"
         >
-          Mayeso Lazalo
+          Mayeso Chinseu Lazaro
         </Link>
 
         {/* Navigation */}
