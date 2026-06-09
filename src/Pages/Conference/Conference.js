@@ -31,9 +31,7 @@ const Conference = () => {
   <div className="max-w-7xl mx-auto px-8">
     <div className="flex flex-col lg:flex-row gap-16">
 
-      {/* LEFT SIDEBAR - CHANGED: Profile image now circular with white border and overlaps banner */}
       <aside className="w-full lg:w-[280px] -mt-24">
-        {/* CHANGED: Added rounded-full for circular shape, object-cover, h-48 w-48, mx-auto on mobile */}
         <img
           src="/profile.jpg"
           alt="Mayeso Lazaro"
@@ -56,8 +54,8 @@ const Conference = () => {
                 mlazaro@unima.ac.mw
               </a>
 
-              <div className="mt-8 text-gray-700 leading-relaxed">
-                Department of Human Ecology
+              <div className="mt-8 text-gray-700 font-semibold leading-relaxed">
+                Human Ecology  and Agricultural Sciences  Department
                 <br />
                 University of Malawi
               </div>

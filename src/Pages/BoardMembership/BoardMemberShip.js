@@ -81,8 +81,8 @@ const BoardMembership = () => {
                       mlazaro@unima.ac.mw
                     </a>
           
-                    <div className="mt-8 text-gray-700 leading-relaxed">
-                      Department of Human Ecology
+                    <div className="mt-8 text-gray-700 font-semibold leading-relaxed">
+                      Human Ecology  and Agricultural Sciences  Department
                       <br />
                       University of Malawi
                     </div>
