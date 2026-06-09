@@ -36,9 +36,9 @@ const Header = () => {
             Supervision
           </Link>
 
-          <Link to="/outreach" className="hover:text-rose-700">
+         { /* <Link to="/outreach" className="hover:text-rose-700">
             Outreach
-          </Link>
+          </Link>*/}
 
           <Link to="/trainings" className="hover:text-rose-700">
             Trainings
