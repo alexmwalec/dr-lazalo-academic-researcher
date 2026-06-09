@@ -79,7 +79,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#efefef]">
+    <div className="min-h-screen bg-slate-100">
       <Header />
 
       {/* Banner */}
@@ -325,44 +325,6 @@ const Contact = () => {
 
               </form>
             </div>
-
-            {/* Research Interests */}
-            <div className="mt-12 bg-white p-8 rounded-xl shadow-sm">
-
-              <h3 className="text-2xl font-bold mb-4">
-                Research Interests
-              </h3>
-
-              <div className="flex flex-wrap gap-3">
-
-                {[
-                  "Ageing",
-                  "Human Ecology",
-                  "Food Security",
-                  "Early Childhood Development",
-                  "Disability Studies",
-                  "Climate Change",
-                  "Social Policy",
-                  "Education",
-                ].map((item) => (
-                  <span
-                    key={item}
-                    className="
-                      bg-[#b44343]/10
-                      text-[#b44343]
-                      px-4
-                      py-2
-                      rounded-full
-                      text-sm
-                    "
-                  >
-                    {item}
-                  </span>
-                ))}
-
-              </div>
-            </div>
-
           </main>
         </div>
       </div>
