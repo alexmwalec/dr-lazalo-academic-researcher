@@ -62,73 +62,54 @@ const Conference = () => {
 
               <div className="mt-8 space-y-3">
                                    {/* Google Scholar */}
-                                   <a
-                                     href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                     className="flex items-center gap-3 text-[#b44343] underline"
-                                   >
-                                     <SiGooglescholar className="text-gray-400" />
-                                     Google Scholar
-                                   </a>
-                       
-                                   {/* ResearchGate */}
-                                   <a
-                                     href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="flex items-center gap-3 text-[#b44343] underline"
-                                   >
-                                     <FaResearchgate className="text-gray-400 "/>
-                                     ResearchGate
-                                   </a>
-                       
-                                   {/* ORCID */}
-                                   <a
-                                     href="https://orcid.org/0000-0001-5314-0638"
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="flex items-center gap-3 text-[#b44343] underline"
-                                   >
-                                     <SiOrcid className="text-gray-400 " />
-                                     ORCID
-                                   </a>
-                       
-                                   {/* Web of Science */}
-                                   <a
-                                     href="https://www.webofscience.com/wos/author/record/PYY-0010-2026"
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="flex items-center gap-3 text-[#b44343] underline"
-                                   >
-                                     <div className="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center text-[10px] font-bold text-gray-500">
-                                       W
-                                     </div>
-                                     Web of Science
-                                   </a>
-                       
-                                   {/* LinkedIn */}
-                                   <a
-                                     href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="flex items-center gap-3 text-[#b44343] underline"
-                                   >
-                                     <FaLinkedinIn className="text-gray-400 " />
-                                     LinkedIn
-                                   </a>
-                       
-                                   {/* Website */}
-                                   <a
-                                     href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="flex items-center gap-3 text-[#b44343] underline"
-                                   >
-                                     <FaGlobe className="text-gray-400" />
-                                     Institutional Web Page
-                                   </a>
-
+                                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center gap-3 text-[#b44343] underline"
+                                    >
+                                      <SiGooglescholar className="text-[#4285F4]" />
+                                      Google Scholar
+                                    </a>
+                                  
+                                    
+                                     <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center gap-3 text-[#b44343] underline"
+                                    >
+                                      <FaResearchgate className="text-[#00CCBB]" />
+                                      ResearchGate
+                                    </a>
+                                  
+                                    
+                                      <a href="https://orcid.org/0000-0001-5314-0638"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center gap-3 text-[#b44343] underline"
+                                    >
+                                      <SiOrcid className="text-[#A6CE39]" />
+                                      ORCID
+                                    </a>
+                                  
+                                    
+                                     <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center gap-3 text-[#b44343] underline"
+                                    >
+                                      <FaLinkedinIn className="text-[#0A66C2]" />
+                                      LinkedIn
+                                    </a>
+                                  
+                                    
+                                     <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center gap-3 text-[#b44343] underline"
+                                    >
+                                      <FaGlobe className="text-[#34A853]" />
+                                      Institutional Web Page
+                                    </a>
               </div>
             </div>
           </aside>
@@ -154,11 +135,11 @@ const Conference = () => {
                     {item.year}
                   </div>
 
-                  <h2 className="text-xl md:text-2xl font-serif underline font-medium text-[#b44343] mb-2">
+                  <h2 className="text-xl md:text-2xl font-medium underline text-[#b44343] mb-3">
                     {item.title}
                   </h2>
 
-                  <div className="text-gray-900 text-ms mb-2">
+                  <div className="text-gray-700 text-ms mb-2">
                     {item.location}
                   </div>
 

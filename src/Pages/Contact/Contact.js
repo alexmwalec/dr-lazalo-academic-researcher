@@ -129,60 +129,58 @@ const Contact = () => {
                 University of Malawi
               </div>
 
-              <div className="mt-10 space-y-3">
+              <div className="mt-10 space-y-3">  
+   <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 text-[#b44343] underline"
+  >
+    <SiGooglescholar className="text-[#4285F4]" />
+    Google Scholar
+  </a>
 
-                <a
-                  href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline"
-                >
-                  <SiGooglescholar />
-                  Google Scholar
-                </a>
+  
+   <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 text-[#b44343] underline"
+  >
+    <FaResearchgate className="text-[#00CCBB]" />
+    ResearchGate
+  </a>
 
-                <a
-                  href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline"
-                >
-                  <FaResearchgate />
-                  ResearchGate
-                </a>
+  
+    <a href="https://orcid.org/0000-0001-5314-0638"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 text-[#b44343] underline"
+  >
+    <SiOrcid className="text-[#A6CE39]" />
+    ORCID
+  </a>
 
-                <a
-                  href="https://orcid.org/0000-0001-5314-0638"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline"
-                >
-                  <SiOrcid />
-                  ORCID
-                </a>
+  
+   <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 text-[#b44343] underline"
+  >
+    <FaLinkedinIn className="text-[#0A66C2]" />
+    LinkedIn
+  </a>
 
-                <a
-                  href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline"
-                >
-                  <FaLinkedinIn />
-                  LinkedIn
-                </a>
+  
+   <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 text-[#b44343] underline"
+  >
+    <FaGlobe className="text-[#34A853]" />
+    Institutional Web Page
+  </a>
 
-                <a
-                  href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline"
-                >
-                  <FaGlobe />
-                  Institutional Web Page
-                </a>
-
-              </div>
-            </div>
+</div>
+     </div>       
           </aside>
 
           {/* Main Content */}
