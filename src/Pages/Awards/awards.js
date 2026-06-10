@@ -1,204 +1,214 @@
 import React from "react";
 import Header from "../Header/Header";
-import {
-  FaLinkedinIn,
-  FaResearchgate,
-  FaGlobe
-} from "react-icons/fa";
+import { FaLinkedinIn, FaResearchgate, FaGlobe } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
 import humanity from "../../Images/humanity.jpg";
 import Footer from "../Footer/Footer";
 
 const Awards = () => {
   return (
-   <div className="min-h-screen bg-slate-100">
-  <Header />
+    <div className="min-h-screen bg-slate-100">
+      <Header />
 
-  {/* Banner */}
-   <div className="relative h-[330px]">
-  <img
-    src={humanity}
-    alt="Academic Research Banner"
-    className="w-full h-full object-cover"
-  />
-
-  <div className="absolute inset-0 bg-black/20" />
-</div>
-
-  {/* Content */}
-  <div className="max-w-7xl mx-auto px-8">
-    <div className="flex flex-col lg:flex-row gap-16">
-
-      <aside className="w-full lg:w-[280px] -mt-24">
+            <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
-          src="/profile.jpg"
-          alt="Mayeso Lazaro"
-          className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
+          src={humanity}
+          alt="Academic Research Banner"
+          className="w-full h-full object-cover"
         />
-          
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
-        <div className="mt-5">
-          <h2 className="text-[22px] font-bold leading-tight">
-            Mayeso Chinseu Lazaro
-          </h2>
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
-          <p className="text-gray-700 mt-1">
-            Senior Lecturer, Researcher and Evaluation Consultant
-          </p>
+          {/* Sidebar */}
+          <aside className="w-full lg:w-[280px] lg:-mt-24 flex flex-col items-center lg:items-start">
 
-          <a
-            href="mailto:mlazaro@unima.ac.mw"
-            className="block mt-8 text-[#b44343] underline"
-          >
-            mlazaro@unima.ac.mw
-          </a>
+            {/* Profile Image */}
+            <div className="mt-[-60px] lg:mt-0">
+              <img
+                src="/profile.jpg"
+                alt="Mayeso Lazaro"
+                className="w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[220px] lg:h-[220px] rounded-full border-4 border-white shadow-lg object-cover"
+              />
+            </div>
 
-          <div className="mt-8 text-gray-700 font-semibold leading-relaxed">
-            Human Ecology  and Agricultural Sciences  Department
-            <br />
-            University of Malawi
-          </div>
+            <div className="mt-4 lg:mt-5 text-center lg:text-left w-full px-2 lg:px-0">
+              <h2 className="text-[18px] sm:text-[20px] lg:text-[22px] font-bold leading-tight">
+                Mayeso Chinseu Lazaro
+              </h2>
 
-          <div className="mt-8 space-y-3">
-            <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#b44343] underline"
-              >
-                <SiGooglescholar className="text-[#4285F4]" />
-                Google Scholar
-              </a>
-            
+              <p className="text-gray-700 mt-1 text-sm sm:text-base">
+                Senior Lecturer, Researcher and Evaluation Consultant
+              </p>
+
               
-               <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#b44343] underline"
+                <a href="mailto:mlazaro@unima.ac.mw"
+                className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
               >
-                <FaResearchgate className="text-[#00CCBB]" />
-                ResearchGate
+                mlazaro@unima.ac.mw
               </a>
-            
-              
-                <a href="https://orcid.org/0000-0001-5314-0638"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#b44343] underline"
-              >
-                <SiOrcid className="text-[#A6CE39]" />
-                ORCID
-              </a>
-            
-              
-               <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#b44343] underline"
-              >
-                <FaLinkedinIn className="text-[#0A66C2]" />
-                LinkedIn
-              </a>
-            
-              
-               <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#b44343] underline"
-              >
-                <FaGlobe className="text-[#34A853]" />
-                Institutional Web Page
-              </a>
-          </div>
+
+              <div className="mt-4 lg:mt-8 text-gray-700 font-semibold leading-relaxed text-sm sm:text-base">
+                Human Ecology and Agricultural Sciences Department
+                <br />
+                University of Malawi
+              </div>
+
+              {/* Social Links */}
+              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
+  <div className="flex flex-col items-start">
+
+    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+    >
+      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
+      Google Scholar
+    </a>
+
+    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
+      ResearchGate
+    </a>
+
+    <a href="https://orcid.org/0000-0001-5314-0638"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
+      ORCID
+    </a>
+
+    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
+      LinkedIn
+    </a>
+
+    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
+      Institutional Web Page
+    </a>
+
+  </div>
+
+            </div>
+            </div>
+          </aside>
+
+          {/* Main Content */}
+          <main className="flex-1 py-6 lg:py-12">
+            <h1 className="text-2xl sm:text-3xl font-bold text-black mb-6 sm:mb-8">
+              Education & Awards
+            </h1>
+
+            {/* Qualifications */}
+            <section className="mb-10 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl font-semibold text-[#b44343] mb-4 sm:mb-6">
+                Qualifications
+              </h2>
+
+              <ol className="list-decimal ml-5 sm:ml-8 space-y-4 text-black leading-7 sm:leading-8 text-sm sm:text-base">
+                <li>
+                  <strong>
+                    Interdisciplinary Doctor of Philosophy (PhD)
+                  </strong>
+                  , Human Geography and Social Sciences, University of Hull,
+                  United Kingdom, 2018.
+                  <br />
+                  <span className="italic">
+                    Funded by the University of Hull Studentship – International
+                    Fee Bursary
+                  </span>
+                </li>
+
+                <li>
+                  <strong>
+                    Postgraduate Certificate in Research Training
+                  </strong>
+                  , University of Hull, United Kingdom, 2016.
+                </li>
+
+                <li>
+                  <strong>
+                    Master of Science (MSc) in Family Ecology and Practice
+                  </strong>
+                  , University of Alberta, Canada, 2013.
+                </li>
+
+                <li>
+                  <strong>
+                    Bachelor of Education Humanities (with Credit)
+                  </strong>
+                  , University of Malawi, Malawi, 2007.
+                </li>
+              </ol>
+            </section>
+
+            {/* Awards */}
+            <section>
+              <h2 className="text-xl sm:text-2xl font-semibold text-[#b44343] mb-4 sm:mb-6">
+                Awards
+              </h2>
+
+              <ol className="list-decimal ml-5 sm:ml-8 space-y-4 text-black leading-7 sm:leading-8 text-sm sm:text-base">
+                <li>
+                  <strong>University of Hull Studentship</strong>, University
+                  of Hull, United Kingdom (2015–2018).
+                </li>
+
+                <li>
+                  <strong>Mary Louise Imrie Graduate Student Award</strong>,
+                  University of Alberta, Canada (January 2012).
+                </li>
+
+                <li>
+                  <strong>Louise Davies Memorial Graduate Scholarship</strong>,
+                  University of Alberta, Canada (September 2011).
+                </li>
+
+                <li>
+                  <strong>
+                    Engberg Graduate Scholarship in International Home Economics
+                  </strong>
+                  , University of Alberta, Canada (September 2011).
+                </li>
+
+                <li>
+                  <strong>
+                    University of Alberta Graduate Students' Association
+                    Professional Development Grant
+                  </strong>
+                  , University of Alberta, Canada (December 21, 2012).
+                </li>
+
+                <li>
+                  <strong>
+                    Malawi Government Scholarship for Junior Staff Development
+                  </strong>{" "}
+                  (July 2010 – August 2012).
+                </li>
+              </ol>
+            </section>
+          </main>
+
         </div>
-      </aside>
-      <main className="flex-1 py-12">
-  <h1 className="text-3xl font-bold text-black mb-8 text-[#b443">
-    Education & Awards
-  </h1>
+      </div>
 
-  {/* Qualifications */}
-  <section className="mb-12">
-    <h2 className="text-2xl font-semibold text-black mb-6 text-[#b44343] text-rose-700">
-      Qualifications
-    </h2>
-
-    <ol className="list-decimal ml-8 space-y-4 text-black leading-8">
-      <li>
-        <strong>Interdisciplinary Doctor of Philosophy (PhD)</strong>,
-        Human Geography and Social Sciences, University of Hull,
-        United Kingdom, 2018.
-        <br />
-        <span className="italic">
-          Funded by the University of Hull Studentship – International Fee Bursary
-        </span>
-      </li>
-
-      <li>
-        <strong>Postgraduate Certificate in Research Training</strong>,
-        University of Hull, United Kingdom, 2016.
-      </li>
-
-      <li>
-        <strong>Master of Science (MSc) in Family Ecology and Practice</strong>,
-        University of Alberta, Canada, 2013.
-      </li>
-
-      <li>
-        <strong>Bachelor of Education Humanities (with Credit)</strong>,
-        University of Malawi, Malawi, 2007.
-      </li>
-    </ol>
-  </section>
-
-  {/* Awards */}
-  <section>
-    <h2 className="text-2xl font-semibold text-black mb-6 text-[#b44343] text-rose-700">
-      Awards
-    </h2>
-
-    <ol className="list-decimal ml-8 space-y-4 text-black leading-8">
-      <li>
-        <strong>University of Hull Studentship</strong>,
-        University of Hull, United Kingdom (2015–2018).
-      </li>
-
-      <li>
-        <strong>Mary Louise Imrie Graduate Student Award</strong>,
-        University of Alberta, Canada (January 2012).
-      </li>
-
-      <li>
-        <strong>Louise Davies Memorial Graduate Scholarship</strong>,
-        University of Alberta, Canada (September 2011).
-      </li>
-
-      <li>
-        <strong>Engberg Graduate Scholarship in International Home Economics</strong>,
-        University of Alberta, Canada (September 2011).
-      </li>
-
-      <li>
-        <strong>
-          University of Alberta Graduate Students' Association Professional Development Grant
-        </strong>,
-        University of Alberta, Canada (December 21, 2012).
-      </li>
-
-      <li>
-        <strong>
-          Malawi Government Scholarship for Junior Staff Development
-        </strong>
-        (July 2010 – August 2012).
-      </li>
-    </ol>
-  </section>
-</main>     
-    </div>
-    </div>
-
-    <Footer />
+      <Footer />
     </div>
   );
-}
+};
 
 export default Awards;
