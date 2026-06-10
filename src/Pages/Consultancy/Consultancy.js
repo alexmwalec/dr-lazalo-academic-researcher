@@ -175,7 +175,7 @@ const Consultancy = () => {
               {currentItems.map((item, index) => (
                 <div
                   key={index}
-                  className="border-l-4 border-[#b44343] pl-4 sm:pl-6 py-2"
+                  className=" sm:pl-6 py-2"
                 >
                   <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                     {item.title}

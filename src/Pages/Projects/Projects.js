@@ -171,11 +171,11 @@ const Projects = () => {
 
             <div className="space-y-8 sm:space-y-12 text-[#2b3b34]">
               {projects.map((project, index) => (
-                <div
+                 <div
                   key={index}
-                  className="border-l-4 border-[#b44343] pl-4 sm:pl-6"
+                  className="sm:pl-6"
                 >
-                  <h2 className="text-lg sm:text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700 leading-snug">
+                 <h2 className="text-lg sm:text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700 leading-snug">
                     {project.title}
                   </h2>
 
