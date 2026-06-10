@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi";
+
+const navLinks = [
+  { to: "/projects", label: "Projects" },
+  { to: "/publications", label: "Publications" },
+  { to: "/consultancy", label: "Consultancy" },
+  { to: "/awards", label: "Awards" },
+  { to: "/supervision", label: "Supervision" },
+  { to: "/trainings", label: "Trainings" },
+  { to: "/board-membership", label: "Board Membership" },
+  { to: "/teaching", label: "Teaching" },
+  { to: "/peer-review", label: "Peer Reviews" },
+  { to: "/conference", label: "Conference Contribution" },
+  { to: "/contact", label: "Contact" },
+];
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="flex items-center justify-between px-6 py-4">
-        
+
         {/* Name / Logo */}
         <Link
           to="/"
@@ -14,56 +31,40 @@ const Header = () => {
           Mayeso Chinseu Lazaro
         </Link>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-[16px] font-medium">
-          <Link to="/projects" className="hover:text-rose-700">
-            Projects
-          </Link>
-
-          <Link to="/publications" className="hover:text-rose-700">
-            Publications
-          </Link>
-
-          <Link to="/consultancy" className="hover:text-rose-700">
-            Consultancy
-          </Link>
-
-          <Link to="/awards" className="hover:text-rose-700">
-            Awards
-          </Link>
-
-          <Link to="/supervision" className="hover:text-rose-700">
-            Supervision
-          </Link>
-
-         { /* <Link to="/outreach" className="hover:text-rose-700">
-            Outreach
-          </Link>*/}
-
-          <Link to="/trainings" className="hover:text-rose-700">
-            Trainings
-          </Link>
-
-          <Link to="/board-membership" className="hover:text-rose-700">
-            Board Membership
-          </Link>
-
-          <Link to="/teaching" className="hover:text-rose-700">
-            Teaching
-          </Link>
-          <Link to="/peer-review" className="hover:text-rose-700">
-            Peer Reviews
-          </Link>
-
-          <Link to="/conference" className="hover:text-rose-700">
-            Conference Contribution
-          </Link>
-
-          <Link to="/contact" className="hover:text-rose-700">
-            Contact
-          </Link>
+          {navLinks.map((link) => (
+            <Link key={link.to} to={link.to} className="hover:text-rose-700">
+              {link.label}
+            </Link>
+          ))}
         </nav>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          className="lg:hidden text-gray-800 text-2xl focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <HiX /> : <HiMenu />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <nav className="lg:hidden bg-white border-t px-6 py-4 flex flex-col gap-4 text-[15px] font-medium shadow-md">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="hover:text-rose-700 border-b pb-2 last:border-none"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 };
