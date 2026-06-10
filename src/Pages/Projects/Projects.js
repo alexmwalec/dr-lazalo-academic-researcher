@@ -1,214 +1,213 @@
 import React from "react";
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer"
+import Footer from "../Footer/Footer";
 import { SiGooglescholar, SiOrcid } from "react-icons/si";
 import { FaResearchgate, FaLinkedinIn, FaGlobe } from "react-icons/fa";
 import humanity from "../../Images/humanity.jpg";
 
+const projects = [
+  {
+    title: "Strengthening Malawi's ECD Management Information System (T4ECE)",
+    role: "Co-Investigator",
+    period: "February 2024 – December 2024",
+    value: "$26,779.58",
+    funder: "USAID – Together for Early Childhood Evidence (T4ECE), USA",
+  },
+  {
+    title:
+      "Child-to-Child Learning Approach: Scaling Up Inclusive Play-Based Learning for Smooth Transition from Pre-Primary to Early Grades",
+    role: "Co-Principal Investigator; Project Lead for Malawi",
+    period: "May 2022 – November 2023",
+    value: "$94,755.43",
+    funder: "International Development Research Centre (IDRC), Canada",
+  },
+  {
+    title:
+      "Complementary Feeding Bowl Pilot Project: Integration of an Infant and Young Child Feeding (IYCF) Toolkit",
+    role: "Co-Investigator; Project Lead for Endline Evaluation",
+    period: "November 2022 – November 2023",
+    value: "$135,000",
+    funder: "UNICEF, Malawi",
+  },
+  {
+    title:
+      "Improving Secondary Education in Malawi (ISEM) Phase I & II – Continuous Professional Development (CPD)",
+    role: "Expert Member and Manual Editor",
+    period: "December 2022 – November 2023",
+    value: "€36,409",
+    funder: "European Union (EU)",
+  },
+  {
+    title:
+      "Energy Provision in Developing Countries: Understanding Private Sector Challenges of Scaling Up Energy Access in Uganda, Tanzania, and Malawi",
+    role: "Co-Investigator",
+    period: "June 2020 – June 2021",
+    value: "£5,000",
+    funder: "Global Challenges Research Fund (GCRF), United Kingdom",
+  },
+  {
+    title:
+      "Promoting Farmers' Rights and Collective Marketing for Sustainable Food Security (Pro-Farmer Project)",
+    role: "Monitoring and Evaluation Manager",
+    period: "June 2018 – June 2019",
+    value: "$120,000",
+    funder: "Open Society Initiative for Southern Africa (OSISA)",
+  },
+];
+
 const Projects = () => {
   return (
     <div className="min-h-screen bg-slate-100">
-  <Header />
+      <Header />
 
-  {/* Banner */}
-   <div className="relative h-[330px]">
-  <img
-    src={humanity}
-    alt="Academic Research Banner"
-    className="w-full h-full object-cover"
-  />
-
-  <div className="absolute inset-0 bg-black/20" />
-</div>
-
-  {/* Content */}
-  <div className="max-w-7xl mx-auto px-8">
-    <div className="flex flex-col lg:flex-row gap-16">
-
-      <aside className="w-full lg:w-[280px] -mt-24">
+      {/* Banner */}
+      <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
-          src="/profile.jpg"
-          alt="Mayeso Lazaro"
-          className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full border-4 border-white shadow-lg object-cover mx-auto md:mx-0"
+          src={humanity}
+          alt="Academic Research Banner"
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
-        <div className="mt-5 text-center md:text-left">
-          <h2 className="text-[22px] font-bold leading-tight">
-            Mayeso Chinseu Lazaro
-          </h2>
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
-          <p className="text-gray-700 mt-1">
-            Senior Lecturer, Researcher and Evaluation Consultant
-          </p>
+          {/* Sidebar */}
+          <aside className="w-full lg:w-[280px] lg:-mt-24 flex flex-col items-center lg:items-start">
 
-          <a
-            href="mailto:mlazaro@unima.ac.mw"
-            className="block mt-8 text-[#b44343] underline"
-          >
-            mlazaro@unima.ac.mw
-          </a>
+            {/* Profile image — overlaps banner on lg, sits below on mobile */}
+            <div className="mt-[-60px] lg:mt-0">
+              <img
+                src="/profile.jpg"
+                alt="Mayeso Lazaro"
+                className="w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[220px] lg:h-[220px] rounded-full border-4 border-white shadow-lg object-cover"
+              />
+            </div>
 
-          <div className="mt-8 text-gray-700 font-semibold leading-relaxed">
-            Human Ecology  and Agricultural Sciences  Department
-            <br />
-            University of Malawi
-          </div>
+            <div className="mt-4 lg:mt-5 text-center lg:text-left w-full px-2 lg:px-0">
+              <h2 className="text-[18px] sm:text-[20px] lg:text-[22px] font-bold leading-tight">
+                Mayeso Chinseu Lazaro
+              </h2>
 
-          <div className="mt-8 space-y-3">
-            <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-3 text-[#b44343] underline"
-  >
-    <SiGooglescholar className="text-[#4285F4]" />
-    Google Scholar
-  </a>
+              <p className="text-gray-700 mt-1 text-sm sm:text-base">
+                Senior Lecturer, Researcher and Evaluation Consultant
+              </p>
 
-  
-   <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-3 text-[#b44343] underline"
-  >
-    <FaResearchgate className="text-[#00CCBB]" />
-    ResearchGate
-  </a>
+              
+                <a href="mailto:mlazaro@unima.ac.mw"
+                  className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
+                >
+                  mlazaro@unima.ac.mw
+                </a>
 
-  
-    <a href="https://orcid.org/0000-0001-5314-0638"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-3 text-[#b44343] underline"
-  >
-    <SiOrcid className="text-[#A6CE39]" />
-    ORCID
-  </a>
+              <div className="mt-4 lg:mt-8 text-gray-700 font-semibold leading-relaxed text-sm sm:text-base">
+                Human Ecology and Agricultural Sciences Department
+                <br />
+                University of Malawi
+              </div>
 
-  
-   <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-3 text-[#b44343] underline"
-  >
-    <FaLinkedinIn className="text-[#0A66C2]" />
-    LinkedIn
-  </a>
+              {/* Social Links */}
+              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
+                
+                 <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                >
+                  <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0" />
+                  Google Scholar
+                </a>
 
-  
-   <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-3 text-[#b44343] underline"
-  >
-    <FaGlobe className="text-[#34A853]" />
-    Institutional Web Page
-  </a>
-          </div>
+                
+                 <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                >
+                  <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0" />
+                  ResearchGate
+                </a>
+
+                
+                 <a  href="https://orcid.org/0000-0001-5314-0638"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                >
+                  <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0" />
+                  ORCID
+                </a>
+
+                
+                 <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                >
+                  <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0" />
+                  LinkedIn
+                </a>
+
+                
+                 <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                >
+                  <FaGlobe className="text-[#34A853] text-lg flex-shrink-0" />
+                  Institutional Web Page
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          {/* Main Content */}
+          <main className="flex-1 py-6 lg:py-12">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+              Projects & Grants
+            </h1>
+
+            <p className="text-base sm:text-xl text-gray-700 mb-6 sm:mb-10">
+              Selected funded research, evaluation, and development projects
+              undertaken through academic, consultancy, and collaborative
+              partnerships.
+            </p>
+
+            <div className="space-y-8 sm:space-y-12 text-[#2b3b34]">
+              {projects.map((project, index) => (
+                <div
+                  key={index}
+                  className="border-l-4 border-[#b44343] pl-4 sm:pl-6"
+                >
+                  <h2 className="text-lg sm:text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700 leading-snug">
+                    {project.title}
+                  </h2>
+
+                  <div className="space-y-1 sm:space-y-2 text-sm sm:text-base">
+                    <p>
+                      <strong>Role:</strong> {project.role}
+                    </p>
+                    <p>
+                      <strong>Grant Period:</strong> {project.period}
+                    </p>
+                    <p>
+                      <strong>Grant Value:</strong> {project.value}
+                    </p>
+                    <p>
+                      <strong>Funder:</strong> {project.funder}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </main>
         </div>
-      </aside>
-      <main className="flex-1 py-12">
-  <h1 className="text-3xl font-bold mb-4">
-    Projects & Grants
-  </h1>
-
-  <p className="text-xl text-gray-700 mb-10">
-    Selected funded research, evaluation, and development projects undertaken
-    through academic, consultancy, and collaborative partnerships.
-  </p>
-
-  <div className="space-y-12 text-[#2b3b34]">
-
-    {/* Project 1 */}
-    <div>
-      <h2 className="text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700">
-        Strengthening Malawi's ECD Management Information System (T4ECE)
-      </h2>
-
-      <div className="space-y-2">
-        <p><strong>Role:</strong> Co-Investigator</p>
-        <p><strong>Grant Period:</strong> February 2024 – December 2024</p>
-        <p><strong>Grant Value:</strong> $26,779.58</p>
-        <p><strong>Funder:</strong> USAID – Together for Early Childhood Evidence (T4ECE), USA</p>
       </div>
+
+      <Footer />
     </div>
-
-    {/* Project 2 */}
-    <div>
-      <h2 className="text-2xl font-semibold text-[#b44343] mb-3">
-        Child-to-Child Learning Approach: Scaling Up Inclusive Play-Based Learning for Smooth Transition from Pre-Primary to Early Grades
-      </h2>
-
-      <div className="space-y-2">
-        <p><strong>Role:</strong> Co-Principal Investigator; Project Lead for Malawi</p>
-        <p><strong>Grant Period:</strong> May 2022 – November 2023</p>
-        <p><strong>Grant Value:</strong> $94,755.43</p>
-        <p><strong>Funder:</strong> International Development Research Centre (IDRC), Canada</p>
-      </div>
-    </div>
-
-    {/* Project 3 */}
-    <div>
-      <h2 className="text-2xl font-semibold text-[#b44343] mb-3">
-        Complementary Feeding Bowl Pilot Project: Integration of an Infant and Young Child Feeding (IYCF) Toolkit
-      </h2>
-
-      <div className="space-y-2">
-        <p><strong>Role:</strong> Co-Investigator; Project Lead for Endline Evaluation</p>
-        <p><strong>Grant Period:</strong> November 2022 – November 2023</p>
-        <p><strong>Grant Value:</strong> $135,000</p>
-        <p><strong>Funder:</strong> UNICEF, Malawi</p>
-      </div>
-    </div>
-
-    {/* Project 4 */}
-    <div>
-      <h2 className="text-2xl font-semibold text-[#b44343] mb-3">
-        Improving Secondary Education in Malawi (ISEM) Phase I & II – Continuous Professional Development (CPD)
-      </h2>
-
-      <div className="space-y-2">
-        <p><strong>Role:</strong> Expert Member and Manual Editor</p>
-        <p><strong>Grant Period:</strong> December 2022 – November 2023</p>
-        <p><strong>Grant Value:</strong> €36,409</p>
-        <p><strong>Funder:</strong> European Union (EU)</p>
-      </div>
-    </div>
-
-    {/* Project 5 */}
-    <div>
-      <h2 className="text-2xl font-semibold text-[#b44343] mb-3">
-        Energy Provision in Developing Countries: Understanding Private Sector Challenges of Scaling Up Energy Access in Uganda, Tanzania, and Malawi
-      </h2>
-
-      <div className="space-y-2">
-        <p><strong>Role:</strong> Co-Investigator</p>
-        <p><strong>Grant Period:</strong> June 2020 – June 2021</p>
-        <p><strong>Grant Value:</strong> £5,000</p>
-        <p><strong>Funder:</strong> Global Challenges Research Fund (GCRF), United Kingdom</p>
-      </div>
-    </div>
-
-    {/* Project 6 */}
-    <div>
-      <h2 className="text-2xl font-semibold text-[#b44343] mb-3">
-        Promoting Farmers' Rights and Collective Marketing for Sustainable Food Security (Pro-Farmer Project)
-      </h2>
-
-      <div className="space-y-2">
-        <p><strong>Role:</strong> Monitoring and Evaluation Manager</p>
-        <p><strong>Grant Period:</strong> June 2018 – June 2019</p>
-        <p><strong>Grant Value:</strong> $120,000</p>
-        <p><strong>Funder:</strong> Open Society Initiative for Southern Africa (OSISA)</p>
-      </div>
-    </div>
-
-  </div>
-</main>
-    </div>
-  </div>
-  <Footer/>
-</div>
- 
   );
 };
 
