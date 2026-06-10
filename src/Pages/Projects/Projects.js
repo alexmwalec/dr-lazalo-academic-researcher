@@ -109,57 +109,51 @@ const Projects = () => {
               </div>
 
               {/* Social Links */}
-              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center items-start">
-                
-                 <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-                >
-                  <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
-                  Google Scholar
-                </a>
+               <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
+  <div className="flex flex-col items-start">
 
-                
-                 <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-                >
-                  <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
-                  ResearchGate
-                </a>
+    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+    >
+      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
+      Google Scholar
+    </a>
 
-                
-                 <a  href="https://orcid.org/0000-0001-5314-0638"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-                >
-                  <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
-                  ORCID
-                </a>
+    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
+      ResearchGate
+    </a>
 
-                
-                 <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-                >
-                  <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
-                  LinkedIn
-                </a>
+    <a href="https://orcid.org/0000-0001-5314-0638"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
+      ORCID
+    </a>
 
-                
-                 <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-                >
-                  <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
-                  Institutional Web Page
-                </a>
-              </div>
+    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
+      LinkedIn
+    </a>
+
+    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+      target="_blank" rel="noopener noreferrer"
+      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+    >
+      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
+      Institutional Web Page
+    </a>
+
+  </div>
+</div>
             </div>
           </aside>
 
