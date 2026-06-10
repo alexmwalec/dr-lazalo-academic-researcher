@@ -109,7 +109,7 @@ const Projects = () => {
               </div>
 
               {/* Social Links */}
-              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-start">
+              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center items-start">
                 
                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
                   target="_blank"
