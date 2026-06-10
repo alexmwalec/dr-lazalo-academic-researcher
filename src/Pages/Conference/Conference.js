@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { conferenceData } from "./conferenceData";
-import { FaLinkedinIn, FaTwitter, FaResearchgate, FaGoogleScholar, FaGlobe } from "react-icons/fa";
+import { FaLinkedinIn,FaResearchgate,FaGlobe } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
 import humanity from "../../Images/humanity.jpg";
 

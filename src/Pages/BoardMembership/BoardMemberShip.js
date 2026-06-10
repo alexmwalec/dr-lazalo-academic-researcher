@@ -3,15 +3,12 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import {
   FaLinkedinIn,
-  FaTwitter,
   FaResearchgate,
-  FaGoogleScholar,
   FaGlobe
 } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
 import { membershipData } from "./membershipData";
 import humanity from "../../Images/humanity.jpg";
-import SocialShareBar from "../SocialShareBar/SocialShareBar";
 
 const BoardMembership = () => {
   const [currentPage, setCurrentPage] = useState(1);

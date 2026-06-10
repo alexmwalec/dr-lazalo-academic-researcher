@@ -3,9 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import {
   FaLinkedinIn,
-  FaTwitter,
   FaResearchgate,
-  FaGoogleScholar,
   FaGlobe
 } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";

@@ -39,9 +39,6 @@ const Trainings = () => {
     currentPage * itemsPerPage
   );
 
-  const handleViewDetails = (id) => {
-    setSelectedItem(selectedItem === id ? null : id);
-  };
 
   return (
     <div className="min-h-screen bg-slate-100">

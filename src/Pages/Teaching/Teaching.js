@@ -2,9 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import {
   FaLinkedinIn,
-  FaTwitter,
   FaResearchgate,
-  FaGoogleScholar,
   FaGlobe
 } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
