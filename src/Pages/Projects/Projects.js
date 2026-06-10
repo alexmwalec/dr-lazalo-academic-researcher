@@ -116,7 +116,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
                 >
-                  <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0" />
+                  <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
                   Google Scholar
                 </a>
 
@@ -126,7 +126,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
                 >
-                  <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0" />
+                  <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
                   ResearchGate
                 </a>
 
@@ -136,7 +136,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
                 >
-                  <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0" />
+                  <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
                   ORCID
                 </a>
 
@@ -146,7 +146,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
                 >
-                  <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0" />
+                  <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
                   LinkedIn
                 </a>
 
@@ -156,7 +156,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
                 >
-                  <FaGlobe className="text-[#34A853] text-lg flex-shrink-0" />
+                  <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
                   Institutional Web Page
                 </a>
               </div>
