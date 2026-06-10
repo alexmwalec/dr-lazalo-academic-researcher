@@ -21,7 +21,17 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between px-6 py-4"> 
+        
+         {/* Mobile Hamburger Button */}
+        <button
+          className="lg:hidden text-gray-800 text-2xl focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <HiX /> : <HiMenu />}
+        </button>
+      </div>
 
         {/* Name / Logo */}
         <Link
@@ -40,15 +50,7 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          className="lg:hidden text-gray-800 text-2xl focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <HiX /> : <HiMenu />}
-        </button>
-      </div>
+      
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
