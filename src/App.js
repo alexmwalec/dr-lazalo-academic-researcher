@@ -13,13 +13,12 @@ import Research  from "./Pages/Publications/Research/Research";
 import BoardMembership from "./Pages/BoardMembership/BoardMemberShip";
 import Teaching from "./Pages/Teaching/Teaching";
 import Role from  "./Pages/Role/Role";
-import Peer_Reviews from "./Pages/Peer_Reviews/Peer_Reviews";
+import Peer_Reviews from "./Pages/Peer_Reviews/PeerReviews";
 import Conference from "./Pages/Conference/Conference";
 import Blogs from "./Pages/Blogs/Blogs";
 import Supervision from './Pages/Supervision/Supervision';
 import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
-import { peerReviewData } from './Pages/Peer_Reviews/peerReviewData';
 import  ProfessorCard from "./Pages/ProfessionalCard/ProfessorCard";
 import SocialShareBar from "./Pages/SocialShareBar/SocialShareBar";
 import Footer from "./Pages/Footer/Footer";
@@ -42,7 +41,7 @@ function App() {
         <Route path="/board-membership" element={<BoardMembership />} />
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/role" element={<Role />} />
-        <Route path='/peer-review' element={<Peer_Reviews />} />
+        <Route path='/peer-review' element={<PeerReviews />} />
         <Route path="/conference" element={<Conference />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/professor-card" element={<ProfessorCard />} />

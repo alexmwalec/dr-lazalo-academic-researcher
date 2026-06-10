@@ -15,7 +15,6 @@ import { SiOrcid, SiGooglescholar } from "react-icons/si";
 const Trainings = () => {
   const [selectedYear, setSelectedYear] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedItem, setSelectedItem] = useState(null);
   const itemsPerPage = 7;
 
   const years = [
