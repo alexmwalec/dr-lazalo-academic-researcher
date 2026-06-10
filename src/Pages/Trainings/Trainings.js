@@ -72,7 +72,7 @@ const Trainings = () => {
 
             <div className="mt-5">
               <h2 className="text-[22px] font-bold leading-tight">
-                Mayeso Lazaro
+                Mayeso Chinseu Lazaro
               </h2>
 
               <p className="text-gray-700 mt-1">

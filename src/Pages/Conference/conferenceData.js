@@ -8,7 +8,7 @@ export const conferenceData = [
     conference: "British Society of Gerontology 55th Annual Conference",
     date: "24–26 June 2026",
     citation: "Durosaiye, I., Sadiq, I., Tekin, M., & Lazaro, M. (2026). A Scoping Review of Ageing and Climate Change in Southern Africa. British Society of Gerontology 55th Annual Conference, Oxford Brookes University, Oxford, UK.",
-    pdfUrl: "/pdfs/TP_introductory_Mr._Alex_Mwale_1779877160.pdf"
+    pdfUrl: "#", 
 
   },
   {
@@ -40,6 +40,7 @@ export const conferenceData = [
     conference: "SES PhD Research Day",
     date: "25 January 2018",
     citation: "Lazaro, M.C. (2018). Grandfathers caring for orphaned grandchildren in rural Southern Malawi: Invisible in Plain Sight? SES PhD Research Day, University of Hull, UK.",
+    pdfUrl: "pdfs/Lazaro 2018 PhD Thesis.pdf",
   },
   {
     id: 5,

@@ -99,7 +99,7 @@ export const publicationsData = [
     authors: "Mayeso C. Lazaro",
     publication:
       "Malawi Journal of Social Sciences, 23(2), 43-67.",
-    pdfUrl: "#",
+    pdfUrl: "pdfs/Lazaro 2024 - Corporal Punishment.pdf",
     coAuthors: [],
   },
 
@@ -112,8 +112,6 @@ export const publicationsData = [
       "G. Ejuu, R. Adela, M. Lazaro, M. Mengstie, N. Mary, A. Jesca & N. Miria",
     publication:
       "Journal of Education and Development, 8(3), 20.",
-    pdfUrl:
-      "https://doi.org/10.20849/jed.v8i3.1443",
     coAuthors: [
       "Godfrey Ejuu, Kyambogo University",
       "Rucecerwa Adela, Kyambogo University",
@@ -122,6 +120,7 @@ export const publicationsData = [
       "Audo Jesca, Kyambogo University",
       "Nandera Miria, Kyambogo University",
     ],
+    pdfUrl: "pdfs/Ejuu et al 2024 Scaling Child to Child Approach.pdf",
   },
 
   {
@@ -130,11 +129,9 @@ export const publicationsData = [
     title:
       "Expanding the Scope of Ethical Research with and for Children and Young People",
     authors:
-      "Hadfield-Hill et al.",
+      "Hadfield-Hill, S., Finn, M., Dudman, J., Ergler, C., Freeman, C., Hayes, T.A., Jarman, P., Leon, L., Lazaro, M.C., Latai-Niusulu, A. and Oza, E.",
     publication:
       "Children's Geographies.",
-    pdfUrl:
-      "https://doi.org/10.1080/14733285.2023.2259331",
     coAuthors: [
       "Sophie Hadfield-Hill, University of Birmingham",
       "Matthew Finn, University of Exeter",
@@ -153,6 +150,7 @@ export const publicationsData = [
       "Helen Tanielu, National University of Samoa",
       "Liz Walker, University of Hull",
     ],
+    pdfUrl: "/pdfs/Hadﬁeld Hill et al 2023 ethical research with and for CYP.pdf", 
   },
 
   {
@@ -165,7 +163,7 @@ export const publicationsData = [
     publication:
       "African Studies, 82(1), 43-66.",
     pdfUrl:
-      "https://doi.org/10.1080/00020184.2023.2212616",
+      "pdfs/Lazaro et al 2023 - Invisible in Plain Sight.pdf",
     coAuthors: [
       "Liz Walker, University of Hull",
       "Elsbeth Robson, University of Hull",
