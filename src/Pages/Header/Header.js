@@ -21,25 +21,25 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-      <div className="flex items-center justify-between px-6 py-4"> 
-        
-         {/* Mobile Hamburger Button */}
-        <button
-          className="lg:hidden text-gray-800 text-2xl focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <HiX /> : <HiMenu />}
-        </button>
-      </div>
+      <div className="flex items-center justify-between px-6 py-4">
 
-        {/* Name / Logo */}
-        <Link
-          to="/"
-          className="text-xl font-bold text-gray-900 uppercase whitespace-nowrap hover:text-rose-700"
-        >
-          Mayeso Chinseu Lazaro
-        </Link>
+  {/* Mobile Hamburger Button*/}
+  <button
+    className="lg:hidden text-gray-800 text-2xl focus:outline-none"
+    onClick={() => setMenuOpen(!menuOpen)}
+    aria-label="Toggle menu"
+  >
+    {menuOpen ? <HiX /> : <HiMenu />}
+  </button>
+
+  {/* Name / Logo  */}
+  <Link
+    to="/"
+    className="text-xl font-bold text-gray-900 uppercase whitespace-nowrap hover:text-rose-700"
+  >
+    Mayeso Chinseu Lazaro
+  </Link>
+</div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-[16px] font-medium">
