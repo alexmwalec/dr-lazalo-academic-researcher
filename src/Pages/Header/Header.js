@@ -22,6 +22,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="flex items-center justify-between px-6 py-4">
+    <div className="flex items-center gap-3" >
 
   {/* Mobile Hamburger Button*/}
   <button
@@ -40,7 +41,7 @@ const Header = () => {
     Mayeso Chinseu Lazaro
   </Link>
 </div>
-
+</div>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-[16px] font-medium">
           {navLinks.map((link) => (
