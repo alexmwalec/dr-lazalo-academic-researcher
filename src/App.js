@@ -13,7 +13,7 @@ import Research  from "./Pages/Publications/Research/Research";
 import BoardMembership from "./Pages/BoardMembership/BoardMemberShip";
 import Teaching from "./Pages/Teaching/Teaching";
 import Role from  "./Pages/Role/Role";
-import Peer_Reviews from "./Pages/Peer_Reviews/PeerReviews";
+import PeerReviews from "./Pages/Peer_Reviews/PeerReviews";
 import Conference from "./Pages/Conference/Conference";
 import Blogs from "./Pages/Blogs/Blogs";
 import Supervision from './Pages/Supervision/Supervision';
