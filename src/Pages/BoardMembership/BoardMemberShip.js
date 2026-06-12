@@ -123,7 +123,7 @@ const BoardMembership = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#b44343] mb-3 sm:mb-4">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Memberships, Boards & Associations
             </h1>
 
