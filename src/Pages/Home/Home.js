@@ -11,14 +11,14 @@ const Home = () => {
       <Header />
 
         {/* Banner */}
-<div className="relative w-full aspect-[16/7] sm:aspect-[16/6] lg:aspect-[16/5] overflow-hidden">
-  <img
-    src={humanity}
-    alt="Academic Research Banner"
-    className="w-full h-full object-cover object-center"
-  />
-  <div className="absolute inset-0 bg-black/10" />
-</div>
+      <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
+        <img
+          src={humanity}
+          alt="Academic Research Banner"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
            {/* Content */}
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
