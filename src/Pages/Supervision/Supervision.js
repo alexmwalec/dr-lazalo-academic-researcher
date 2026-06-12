@@ -191,7 +191,7 @@ const Supervision = () => {
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
             <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-              Student Supervision
+               Supervision
             </h1>
 
             <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-10">
