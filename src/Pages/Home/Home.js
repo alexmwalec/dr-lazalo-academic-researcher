@@ -177,7 +177,7 @@ const Home = () => {
                 USAID and other international partners.
               </p>
 
-              <span className="block text-black font-bold">CV</span>
+             {/* <span className="block text-black font-bold">CV</span> */}
             </div>
           </main>
 
