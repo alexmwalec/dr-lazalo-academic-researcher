@@ -6,76 +6,148 @@ import { SiOrcid, SiGooglescholar } from "react-icons/si";
 import humanity from "../../Images/humanity.jpg";
 
 const supervisionData = [
+  // Current Supervisees (2027 Completion)
   {
-    year: "Current (2027 completion)",
+    year: "Current (2027 in completion)",
     student: "Joshua Midian and Esther Phambana",
-    title: "Association between housing quality and multi-dimensional wellbeing in rural and urban Zomba",
+    title: "Association between housing quality and multi-dimensional wellbeing in rural and urban Zomba"
   },
   {
-    year: "Current (2027 completion)",
+    year: "Current (2027 in completion)",
     student: "Priscila Dula",
-    title: "Investigating teacher perceptions on school lived experience of students from broken homes",
+    title: "Investigating teacher perceptions on school lived experience of students from broken homes: a case of girls and boys boarding schools in Zomba"
   },
   {
-    year: "Current (2027 completion)",
+    year: "Current (2027 in completion)",
     student: "Phillip Sungeni and Richard Khukhumba",
-    title: "Vendor and consumer perceptions towards fried sweet potatoes in Chikwawa and Salima",
+    title: "Vendor and consumer perceptions towards fried sweet potatoes (mbalaga) in Chikwawa and Salima: Have sweet potatoes replaced Irish potatoes in trading centres?"
   },
   {
-    year: "Current (2027 completion)",
+    year: "Current (2027 in completion)",
     student: "Gomezgani Chilwa and Louis Chikanthu",
-    title: "University of Malawi students' satisfaction with housing on and off campus",
+    title: "Investigating University of Malawi students' satisfaction with their housing on and off campus"
   },
   {
-    year: "Current (2027 completion)",
+    year: "Current (2027 in completion)",
     student: "Daniel Mkumbwa and Wongani Muhone",
-    title: "Financial literacy and saving behaviour of university students in Zomba",
+    title: "Assessing the financial literacy and saving behaviour of university students in Zomba"
   },
   {
-    year: "Current (2027 completion)",
-    student: "Nero Boston and Rafiq Daudi",
-    title: "Impact of parenting styles on academic performance of secondary school students",
-  },
-  {
-    year: "Current (2027 completion)",
+    year: "Current (2027 in completion)",
     student: "Lenard Kantondo and Adam Adon",
-    title: "Aspiration-reality gap in housing among informal settlement dwellers",
+    title: "Investigating the aspiration-reality gap in housing among informal settlement dwellers in Zomba"
   },
+  {
+    year: "Current (2027 in completion)",
+    student: "John Nkata and Emmanuel Chinyama",
+    title: "Assessing the impact of family cohesion on the socio-economic status of families in Thundu, Zomba"
+  },
+  {
+    year: "Current (2027 in completion)",
+    student: "Francis Nyalugwe and George Mwamadi",
+    title: "An assessment of the adequacy of Higher Education Students' Loan and Grants Board upkeep allowance against the rising cost of living in Zomba: A case of University of Malawi students"
+  },
+  {
+    year: "Current (2027 in completion)",
+    student: "Mathews Doni and Harneck Sitolo",
+    title: "The impact of private primary tuition on household resource management and nutrition security among families in Zomba: The case of The Learning Centre and MAT Academy"
+  },
+  {
+    year: "Current (2027 in completion)",
+    student: "McDonald Muhone and Aonenji Mulenga",
+    title: "Assessing the potential impact of the quality of housing on the health of households in Che Mbera, Balaka"
+  },
+  {
+    year: "Current (2027 in completion)",
+    student: "Precious Smart and Limbani Chomali",
+    title: "Assessing the impact of food inflation on household food choices in Zomba"
+  },
+
+  // 2025 Supervisees
   {
     year: "2025",
     student: "Davie Makwinja Kalitsiro and Carren Cathy Kananji",
-    title: "Environmental sustainability in informal settlements of Zomba",
+    title: "Evaluating the environmental sustainability in informal settlement of Mpondabwino, Zomba"
   },
   {
     year: "2025",
     student: "Ebenezer Genesis",
-    title: "Co-residence of children and older persons and quality of life",
+    title: "Assessing how children and older persons co-residence affect their quality of life"
   },
   {
     year: "2025",
     student: "Hastings Kachale and Amos Chirwa",
-    title: "Private student housing quality, affordability and safety in Zomba",
+    title: "Assessing quality, affordability, and safety of privately-owned students housing in Chikanda, Zomba"
   },
+  {
+    year: "2025",
+    student: "Jones Kamwendo and Hernim Namani",
+    title: "The impact of incomplete dwelling structures on the well-being of women in female-headed households in Mangunda, Thyolo"
+  },
+  {
+    year: "2025",
+    student: "Laurent Shaba and Feston Mgomba",
+    title: "Exploring the impact of financial literacy on family conflict in Chinamwali, Zomba"
+  },
+  {
+    year: "2025",
+    student: "Precious Mkalawa and Adam Mkandawire",
+    title: "The impact of poor housing conditions on the wellbeing of University of Malawi students living in Chikanda, Zomba"
+  },
+  {
+    year: "2025",
+    student: "Fedson Ntentha and Tiyamike Ezekiel",
+    title: "Understanding older persons abuse: forms, risk factors, protective factors, preventive measures, and their effectiveness"
+  },
+  {
+    year: "2025",
+    student: "Ulunji Shaba and Hernderson Mwale",
+    title: "Exploring the perceptions of children, young people, and older persons on older persons care in Chikanda"
+  },
+  {
+    year: "2025",
+    student: "Wesley Chiphwanya and Feston Machemba",
+    title: "Assessing effects of poor housing on quality of life of older persons in Jali, Zomba"
+  },
+
+  // 2024 Supervisees
   {
     year: "2024",
     student: "Chisomo Julius and Chisomo Kaira",
-    title: "Socioeconomic status and consumer behaviour in Zomba",
+    title: "Exploring the influence of households' socioeconomic status on consumer behaviour in Zomba"
   },
   {
     year: "2024",
     student: "Bryan Kalonga and Good Siyame",
-    title: "Cultural norms and consumer decision-making in Zomba",
+    title: "The influence of cultural norms and values on consumer decision-making and behaviour in Zomba"
   },
   {
     year: "2024",
     student: "Yamikani Lizibowa and Wongani Mdumuka",
-    title: "Financial literacy and family financial behaviour",
+    title: "An examination of the relationship between financial literacy and family financial behaviour in Zomba urban and rural"
   },
+  {
+    year: "2024",
+    student: "Memory Kamwendo and Andrea Kishombe",
+    title: "Investigating the impact of divorce on social interaction of preschool children in Zomba"
+  },
+  {
+    year: "2024",
+    student: "Grace Madondolo and Clement Madzidzi",
+    title: "Exploring the impact of poor housing conditions on child development and well-being in Zomba rural and urban"
+  },
+  {
+    year: "2024",
+    student: "Lyness Kumwenda and Mphatso Batson",
+    title: "Exploring how housing influences the well-being of older persons"
+  },
+
+  // External Examination
   {
     year: "External (2023)",
     student: "North-West University (South Africa)",
-    title: "PhD Thesis examination in older persons and ageing studies",
-  },
+    title: "PhD Thesis examination in older persons and ageing studies"
+  }
 ];
 
 const Supervision = () => {
