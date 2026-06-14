@@ -190,4 +190,11 @@ export const publicationsData = [
       "Prakash Tyagi, GRAVIS India",
     ],
   },
+   { id: 12,
+    year : 2013,
+    title: 'The meaning of a healthy family in Sub-Saharan Africa: Perspectives of two-parent families in urban Malawi',
+    authors:'Lazaro, M. C',
+    publication: 'Master’s thesis',
+    pdfUrl: 'pdfs/Lazaro 2013 MSc Thesis.pdf'
+  }
 ];

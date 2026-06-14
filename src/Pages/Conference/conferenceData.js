@@ -13,13 +13,14 @@ export const conferenceData = [
   },
   {
     id: 2,
-    year: 2021,
+    year: 2023,
     title: "Invisible in Plain Sight? Grandfathers Caring for Orphaned Grandchildren in Rural Malawi",
     location: "Norwich, England",
     authors: "Lazaro, M., Robson, E., & Walker, L.",
     conference: "Development Studies Association (DSA) Annual Conference",
     date: "14 June – 2 July 2021",
     citation: "Lazaro, M., Robson, E., & Walker, L. (2021). Invisible in plain sight? Grandfathers caring for orphaned grandchildren in rural Malawi. Development Studies Association Annual Conference, University of East Anglia, Norwich, England.",
+    pdfUrl :  "pdfs/Lazaro et al 2023 - Invisible in Plain Sight.pdf"
   },
   {
     id: 3,
@@ -41,7 +42,7 @@ export const conferenceData = [
     date: "25 January 2018",
     citation: "Lazaro, M.C. (2018). Grandfathers caring for orphaned grandchildren in rural Southern Malawi: Invisible in Plain Sight? SES PhD Research Day, University of Hull, UK.",
     pdfUrl: "pdfs/Lazaro 2018 PhD Thesis.pdf",
-  },
+  }, 
   {
     id: 5,
     year: 2017,
