@@ -15,7 +15,7 @@ export const membershipData = [
     year: 2022,
     title: "Patron",
     organization: "Proactive Youth Association (PROYA)",
-    period: "2022 – Present",
+    period: "2022 –2026 ",
   },
   {
     year: 2018,
