@@ -123,7 +123,7 @@ const Peer_Reviews = () => {
 
               <div className="border-b border-gray-300 pb-5 sm:pb-6">
                 <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-2 leading-snug">
-                  Editorial Member – Malawi Journal of Science and Technology
+                  Editorial Member – Malawi Journal of Science and Technology, University of Malawi
                 </h2>
                 <p className="text-gray-800 text-sm sm:text-base">
                   <strong>Role:</strong> Editorial Member
@@ -159,7 +159,7 @@ const Peer_Reviews = () => {
 
               <div className="border-b border-gray-300 pb-5 sm:pb-6">
                 <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-2 leading-snug">
-                  Peer Reviewer – Food Studies Seminar
+                  Peer Reviewer – Food Studies Seminar, University of Malawi
                 </h2>
                 <p className="text-gray-800 text-sm sm:text-base">
                   <strong>Year:</strong> 2024

@@ -2,7 +2,7 @@
 export const peerReviewData = [
   {
     year: 2026,
-    title: "Editorial Member – Malawi Journal of Science and Technology",
+    title: "Editorial Member – Malawi Journal of Science and Technology, University of Malawi",
     role: "Editorial Member",
     period: "February 2026 – Present",
   },
@@ -20,7 +20,7 @@ export const peerReviewData = [
   },
   {
     year: 2024,
-    title: "Peer Reviewer – Food Studies Seminar",
+    title: "Peer Reviewer – Food Studies Seminar, University of Malawi",
     role: "Peer Reviewer",
     details: "Two abstracts reviewed",
   },
