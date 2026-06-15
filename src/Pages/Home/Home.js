@@ -16,6 +16,7 @@ const Home = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [containerWidth, setContainerWidth] = useState(800);
+  const [showCV, setShowCV] = useState(false);
   const containerRef = useRef(null);
 
   // Disable right-click, print/save/devtools shortcuts on this page
@@ -63,13 +64,26 @@ const Home = () => {
   const goToNextPage = () =>
     setPageNumber((prev) => Math.min(prev + 1, numPages));
 
-  const scrollToCV = (e) => {
-    e.preventDefault();
-    document.getElementById("cv-section")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  // FIXED: Toggle CV visibility instead of just showing
+  const toggleCV = () => {
+    setShowCV(!showCV);
+    // Reset page number when hiding
+    if (showCV) {
+      setPageNumber(1);
+    }
   };
+
+  // FIXED: Scroll to CV when showing, but only if becoming visible
+  useEffect(() => {
+    if (showCV) {
+      setTimeout(() => {
+        document.getElementById("cv-section")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  }, [showCV]);
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -127,8 +141,7 @@ const Home = () => {
               <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
                 <div className="flex flex-col items-start">
 
-                  
-                   <a  href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
@@ -137,8 +150,7 @@ const Home = () => {
                     Google Scholar
                   </a>
 
-                  
-                  <a  href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                  <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
@@ -147,8 +159,7 @@ const Home = () => {
                     ResearchGate
                   </a>
 
-                  
-                  <a  href="https://orcid.org/0000-0001-5314-0638"
+                  <a href="https://orcid.org/0000-0001-5314-0638"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
@@ -157,8 +168,7 @@ const Home = () => {
                     ORCID
                   </a>
 
-                  
-                   <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                  <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
@@ -167,8 +177,7 @@ const Home = () => {
                     LinkedIn
                   </a>
 
-                  
-                   <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                  <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
@@ -191,8 +200,7 @@ const Home = () => {
             <div className="space-y-6 sm:space-y-8 text-[16px] sm:text-[18px] leading-8 sm:leading-9 text-[#333] max-w-5xl">
               <p>
                 Senior Lecturer, Researcher, and Evaluation Consultant at the{" "}
-                
-                 <a href="https://www.unima.ac.mw"
+                <a href="https://www.unima.ac.mw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
@@ -205,8 +213,7 @@ const Home = () => {
                 am a Technical Associate at The Center for Institutional and
                 Technical Support for Civil Society Organizations (CITS),
                 Uganda{" "}
-                
-                 <a href="https://www.citsug.org"
+                <a href="https://www.citsug.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
@@ -215,8 +222,7 @@ const Home = () => {
                 </a>
                 . I am also a network team member of Fructuous Consulting,
                 South Africa{" "}
-                
-                  <a href="https://fructuousconsulting.africa"
+                <a href="https://fructuousconsulting.africa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
@@ -266,88 +272,101 @@ const Home = () => {
                 Programmes during COVID-19.
               </p>
 
-              {/* CV Link */}
-              
-              <a   href="#cv-section"
-                onClick={scrollToCV}
+              {/* FIXED: Toggle button - shows "View CV" when hidden, "Hide CV" when shown */}
+              <button
+                onClick={toggleCV}
                 className="inline-block text-[#b44343] font-bold underline text-base sm:text-lg hover:text-rose-700"
               >
-                View CV ↓
-              </a>
+                {showCV ? "Hide CV" : "View CV"}
+              </button>
             </div>
 
-            {/* CV SECTION */}
-            <section id="cv-section" className="mt-12 sm:mt-16 scroll-mt-24">
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#222] mb-2 sm:mb-3">
-                Curriculum Vitae
-              </h2>
-
-              <p className="text-sm sm:text-base text-gray-700 mb-6">
-                View-only. Downloading, printing, and copying are disabled.
-              </p>
-
-              <div
-                ref={containerRef}
-                className="relative bg-white shadow-md rounded-lg p-2 sm:p-4 select-none"
-                style={{ userSelect: "none" }}
-                onCopy={(e) => e.preventDefault()}
+            {/* CV SECTION - FIXED: Added a close button inside */}
+            {showCV && (
+              <section 
+                id="cv-section"
+                className="mt-12 sm:mt-16 scroll-mt-24"
               >
-                {/* Watermark overlay */}
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center z-10 overflow-hidden">
-                  <div className="text-gray-400/20 text-2xl sm:text-4xl font-bold rotate-[-30deg] whitespace-nowrap select-none">
-                    Mayeso Chinseu Lazaro &nbsp;•&nbsp; View Only &nbsp;•&nbsp;
-                    Mayeso Chinseu Lazaro &nbsp;•&nbsp; View Only
-                  </div>
+                <div className="flex justify-between items-center mb-2 sm:mb-3">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#222]">
+                    Curriculum Vitae
+                  </h2>
+                  {/* FIXED: Added close button for CV */}
+                  <button
+                    onClick={toggleCV}
+                    className="text-gray-400 hover:text-[#b44343] transition-colors"
+                    aria-label="Close CV"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
 
-                <Document
-                  file={cvFile}
-                  onLoadSuccess={onDocumentLoadSuccess}
-                  loading={
-                    <div className="text-center py-20 text-gray-500">
-                      Loading CV...
-                    </div>
-                  }
-                  error={
-                    <div className="text-center py-20 text-red-500">
-                      Failed to load CV.
-                    </div>
-                  }
+                <div
+                  ref={containerRef}
+                  className="relative bg-white shadow-md rounded-lg p-2 sm:p-4 select-none"
+                  style={{ userSelect: "none" }}
+                  onCopy={(e) => e.preventDefault()}
                 >
-                  <Page
-                    pageNumber={pageNumber}
-                    width={Math.min(containerWidth - 16, 900)}
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}
-                  />
-                </Document>
-
-                {/* Navigation */}
-                {numPages && (
-                  <div className="flex justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 flex-wrap">
-                    <button
-                      onClick={goToPrevPage}
-                      disabled={pageNumber <= 1}
-                      className="px-3 sm:px-4 py-2 border rounded-md bg-white disabled:opacity-50 text-sm"
-                    >
-                      Previous
-                    </button>
-
-                    <span className="text-sm sm:text-base text-gray-700">
-                      Page {pageNumber} of {numPages}
-                    </span>
-
-                    <button
-                      onClick={goToNextPage}
-                      disabled={pageNumber >= numPages}
-                      className="px-3 sm:px-4 py-2 border rounded-md bg-white disabled:opacity-50 text-sm"
-                    >
-                      Next
-                    </button>
+                  {/* Watermark overlay */}
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center z-10 overflow-hidden">
+                    <div className="text-gray-400/20 text-2xl sm:text-4xl font-bold rotate-[-30deg] whitespace-nowrap select-none">
+                      Mayeso Chinseu Lazaro &nbsp;•&nbsp; View Only &nbsp;•&nbsp;
+                      Mayeso Chinseu Lazaro &nbsp;•&nbsp; View Only
+                    </div>
                   </div>
-                )}
-              </div>
-            </section>
+
+                  <Document
+                    file={cvFile}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                    loading={
+                      <div className="text-center py-20 text-gray-500">
+                        Loading CV...
+                      </div>
+                    }
+                    error={
+                      <div className="text-center py-20 text-red-500">
+                        Failed to load CV.
+                      </div>
+                    }
+                  >
+                    <Page
+                      pageNumber={pageNumber}
+                      width={Math.min(containerWidth - 16, 900)}
+                      renderTextLayer={false}
+                      renderAnnotationLayer={false}
+                    />
+                  </Document>
+
+                  {/* Navigation */}
+                  {numPages && (
+                    <div className="flex justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 flex-wrap">
+                      <button
+                        onClick={goToPrevPage}
+                        disabled={pageNumber <= 1}
+                        className="px-3 sm:px-4 py-2 border rounded-md bg-white disabled:opacity-50 text-sm hover:bg-gray-50 transition-colors"
+                      >
+                        Previous
+                      </button>
+
+                      <span className="text-sm sm:text-base text-gray-700">
+                        Page {pageNumber} of {numPages}
+                      </span>
+
+                      <button
+                        onClick={goToNextPage}
+                        disabled={pageNumber >= numPages}
+                        className="px-3 sm:px-4 py-2 border rounded-md bg-white disabled:opacity-50 text-sm hover:bg-gray-50 transition-colors"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </section>
+            )}
+
           </main>
 
         </div>
