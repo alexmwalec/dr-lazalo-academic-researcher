@@ -4,7 +4,7 @@ const Footer = () => {
     return(
         <footer className="bg-white py-14">
             <p className=" text-center text-[15px] text-gray-800">
-            © 2026 Mayeso Lazaro. All rights reserved. 
+            © 2026 Mayeso Chinseu Lazaro. All rights reserved. 
             </p>
         </footer>
     )

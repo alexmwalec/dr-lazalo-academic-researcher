@@ -187,7 +187,6 @@ const Publications = () => {
                   <div className="text-gray-700 text-xs sm:text-sm mb-2">
                     <strong>Authors:</strong> {item.authors}
                   </div>
-
                   <div className="text-gray-700 text-xs sm:text-sm leading-relaxed">
                     {item.publication}
                   </div>
