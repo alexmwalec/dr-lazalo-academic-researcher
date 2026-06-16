@@ -197,13 +197,26 @@ const Publications = () => {
                       {selectedItem === item.id ? "Hide Details" : "View Details"}
                     </button>
 
-                    {item.pdfUrl && (
-                      <a href={item.pdfUrl}
+                    {/* Conditional: Show PDF if pdfUrl exists, else show DOI if doi exists */}
+                    {item.pdfUrl && item.pdfUrl !== "#" && (
+                      <a
+                        href={item.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#b44343] text-sm font-medium hover:text-amber-700"
                       >
                         View PDF
+                      </a>
+                    )}
+
+                    {item.doi && (
+                      <a
+                        href={item.doi}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#b44343] text-sm font-medium hover:text-amber-700"
+                      >
+                        DOI
                       </a>
                     )}
                   </div>
@@ -229,7 +242,7 @@ const Publications = () => {
               ))}
             </div>
 
-            {/* Unpublished Works - FIXED: Removed duplicate {...} block */}
+            {/* Unpublished Works */}
             {currentPage === totalPages && (
               <section className="mt-14">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6">
