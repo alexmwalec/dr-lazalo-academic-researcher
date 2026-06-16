@@ -15,7 +15,7 @@ export const publicationsData = [
     id: 2,
     year: 2026,
     title:
-      "A Scoping Review of Ageing and Climate Change in Southern Africa",
+      "Scoping Review of Housing, Climate , and Ageing in Southern Africa",
     authors:
       "Isaiah Durosaiye, Ikram Sadiq, Melis Tekin, Mayeso C. Lazaro",
     publication:
@@ -204,6 +204,6 @@ export const publicationsData = [
     title: 'The meaning of a healthy family in Sub-Saharan Africa: Perspectives of two-parent families in urban Malawi',
     authors:'Lazaro, M. C',
     publication: 'Spring Edmonton,Alberta,Canada',
-    pdfUrl: 'pdfs/Lazaro 2013 MSc Thesis.pdf'
+    pdfUrl: 'pdfs/publication/Lazaro 2013 MSc Thesis.pdf'
   }
 ];

@@ -68,7 +68,7 @@ export const consultancyData = [
   {
     year: 2020,
     title:
-      "Team Member – Improving Secondary Education in Malawi (ISEM) Project Phases I & II",
+      "Expert and Manual Editor – Improving Secondary Education in Malawi (ISEM) Project Phases I & II",
     client: "Government of Malawi (funded by the EU)",
     period: "March 2020 – June 2023",
   },

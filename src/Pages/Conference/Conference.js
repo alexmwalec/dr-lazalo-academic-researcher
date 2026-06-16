@@ -144,7 +144,7 @@ const Conference = () => {
               {item.year}
             </div>
 
-            <h2 className="text-lg sm:text-xl md:text-2xl font-medium underline text-[#b44343] mb-3 leading-snug">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-medium  text-[#b44343] mb-3 leading-snug">
               {item.title}
             </h2>
 
