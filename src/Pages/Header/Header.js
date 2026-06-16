@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const navLinks = [
-  { to: "/", label: "Home" },
   { to: "/projects", label: "Projects" },
   { to: "/publications", label: "Publications" },
   { to: "/consultancy", label: "Consultancy" },
