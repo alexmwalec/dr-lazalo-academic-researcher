@@ -267,7 +267,7 @@ const Publications = () => {
                     </div>
 
                     <div className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Doctoral Dissertation, University of Hull, United Kingdom.
+                      University of Hull, United Kingdom.
                     </div>
 
                     <div className="text-sm">
@@ -278,7 +278,7 @@ const Publications = () => {
                         rel="noopener noreferrer"
                         className="text-[#b44343] underline hover:text-amber-700"
                       >
-                        View Dissertation
+                        hull-repository.worktribe.com/output/4220827
                       </a>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ const Publications = () => {
                     </div>
 
                     <div className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Master's Thesis, University of Alberta, Canada.
+                      University of Alberta, Canada.
                     </div>
 
                     <div className="text-sm">
