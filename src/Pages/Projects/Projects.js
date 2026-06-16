@@ -16,7 +16,7 @@ const projects = [
   {
     title:
       "Child-to-Child Learning Approach: Scaling Up Inclusive Play-Based Learning for Smooth Transition from Pre-Primary to Early Grades",
-    role: "Co-Principal Investigator; Project Lead for Malawi",
+    role: "Co-Principal Investigator; later Project Lead for Malawi",
     period: "May 2022 – November 2023",
     value: "$94,755.43",
     funder: "International Development Research Centre (IDRC), Canada",
@@ -24,7 +24,7 @@ const projects = [
   {
     title:
       "Complementary Feeding Bowl Pilot Project: Integration of an Infant and Young Child Feeding (IYCF) Toolkit",
-    role: "Co-Investigator; Project Lead for Endline Evaluation",
+    role: "Co-Investigator; later Project Lead for Endline Evaluation",
     period: "November 2022 – November 2023",
     value: "$135,000",
     funder: "UNICEF, Malawi",
@@ -77,7 +77,6 @@ const Projects = () => {
           {/* Sidebar */}
           <aside className="w-full lg:w-[280px] lg:-mt-24 flex flex-col items-center lg:items-start">
 
-            {/* Profile image — overlaps banner on lg, sits below on mobile */}
             <div className="mt-[-60px] lg:mt-0">
               <img
                 src="/profile.jpg"
@@ -164,9 +163,7 @@ const Projects = () => {
             </h1>
 
             <p className="text-base sm:text-xl text-gray-700 mb-6 sm:mb-10">
-              Selected funded research, evaluation, and development projects
-              undertaken through academic, consultancy, and collaborative
-              partnerships.
+              Selected projects and grants undertaken through local and international collaborations and partnerships
             </p>
 
             <div className="space-y-8 sm:space-y-12 text-[#2b3b34]">

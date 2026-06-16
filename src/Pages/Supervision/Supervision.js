@@ -144,9 +144,9 @@ const supervisionData = [
 
   // External Examination
   {
-    year: "External (2023)",
-    student: "North-West University (South Africa)",
-    title: "PhD Thesis examination in older persons and ageing studies"
+    isExternal: true,
+    title: "External Examination (2023)",
+    description: "Dr Mayeso Chinseu Lazaro examined a PhD Thesis at the North-West University (NWU), South Africa (2023), in the area of older persons and ageing."
   }
 ];
 
@@ -163,7 +163,7 @@ const Supervision = () => {
       <Header />
 
       {/* Banner */}
-             <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
+      <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
           src={humanity}
           alt="Academic Research Banner"
@@ -197,8 +197,7 @@ const Supervision = () => {
                 Senior Lecturer, Researcher and Evaluation Consultant
               </p>
 
-              
-                <a href="mailto:mlazaro@unima.ac.mw"
+              <a href="mailto:mlazaro@unima.ac.mw"
                 className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
               >
                 mlazaro@unima.ac.mw
@@ -212,58 +211,57 @@ const Supervision = () => {
 
               {/* Social Links */}
               <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
-  <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start">
 
-    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-    >
-      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
-      Google Scholar
-    </a>
+                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                  >
+                    <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
+                    Google Scholar
+                  </a>
 
-    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
-      ResearchGate
-    </a>
+                  <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
+                    ResearchGate
+                  </a>
 
-    <a href="https://orcid.org/0000-0001-5314-0638"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
-      ORCID
-    </a>
+                  <a href="https://orcid.org/0000-0001-5314-0638"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
+                    ORCID
+                  </a>
 
-    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
-      LinkedIn
-    </a>
+                  <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
+                    LinkedIn
+                  </a>
 
-    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
-      Institutional Web Page
-    </a>
+                  <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
+                    Institutional Web Page
+                  </a>
 
-  </div>
-
-            </div>
+                </div>
+              </div>
             </div>
           </aside>
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
             <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-               Supervision
+              Supervision
             </h1>
 
             <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-10">
@@ -281,15 +279,28 @@ const Supervision = () => {
                     {item.year}
                   </p>
 
-                  <p className="text-gray-900 font-medium mt-1 text-sm sm:text-base">
-                    <span className="text-gray-800 font-semibold">Student:</span>{" "}
-                    {item.student}
-                  </p>
-
-                  <p className="text-gray-900 mt-1 text-sm sm:text-base">
-                    <span className="text-gray-800 font-semibold">Title:</span>{" "}
-                    {item.title}
-                  </p>
+                  {/* External Examination - Special Display */}
+                  {item.isExternal ? (
+                    <>
+                      <h3 className="text-xl font-bold text-gray-900 mt-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-700 mt-1 text-sm sm:text-base">
+                        {item.description}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-gray-900 font-medium mt-1 text-sm sm:text-base">
+                        <span className="text-gray-800 font-semibold">Student:</span>{" "}
+                        {item.student}
+                      </p>
+                      <p className="text-gray-900 mt-1 text-sm sm:text-base">
+                        <span className="text-gray-800 font-semibold">Title:</span>{" "}
+                        {item.title}
+                      </p>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
