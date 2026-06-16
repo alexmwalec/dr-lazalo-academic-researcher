@@ -128,7 +128,7 @@ const Awards = () => {
                   United Kingdom, 2018.
                   <br />
                   <span className="italic">
-                    Funded by the University of Hull Studentship – International
+                 – International
                     Fee Bursary
                   </span>
                 </li>
@@ -164,8 +164,8 @@ const Awards = () => {
 
               <ol className="list-decimal ml-5 sm:ml-8 space-y-4 text-black leading-7 sm:leading-8 text-sm sm:text-base">
                 <li>
-                  <strong>University of Hull Studentship</strong>, University
-                  of Hull, United Kingdom (2015–2018).
+                  <strong>University of Hull Studentship</strong>,
+                  <span className="italic"> Funded by the University of Hull Studentship</span> University of Hull, United Kingdom (2015–2018).
                 </li>
 
                 <li>

@@ -271,7 +271,66 @@ const Home = () => {
                 and Standard Operating Procedures (SOPs) for Nutrition
                 Programmes during COVID-19.
               </p>
+               <div className="mt-10">
+  <h3 className="text-2xl sm:text-3xl font-bold text-[#222] mb-6">
+    Areas of Expertise
+  </h3>
 
+  <div className="border-gray-200 p-6">
+    <ul className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>
+          Programme and project monitoring and evaluation (baselines, midlines,
+          and endlines)
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>
+          Qualitative research: in-depth interviews (IDIs), key-informant
+          interviews (KIIs), photovoice, drawing-elicited interviews, focus
+          group discussions (FGDs), ethnographies, and stakeholder
+          consultations
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>Qualitative data management and analysis</span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>
+          Research team training, field supervision, and leadership
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>
+          Stakeholder engagement and high-level consultation
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>
+          Evidence-based policy advising and report writing
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="text-[#b44343] font-bold">•</span>
+        <span>
+          Microsoft Office Suite and qualitative data analysis software (NVivo)
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
               {/* FIXED: Toggle button - shows "View CV" when hidden, "Hide CV" when shown */}
               <button
                 onClick={toggleCV}

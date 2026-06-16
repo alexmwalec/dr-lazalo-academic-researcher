@@ -190,20 +190,4 @@ export const publicationsData = [
       "Prakash Tyagi, GRAVIS India",
     ],
   },
-  {
-   id: 12,
-   year:2018,
-   authors:'Lazaro, M. C.',
-   title:'Grandfathers caring for orphaned grandchildren in rural southern Malawi: Invisible in plain sight?',
-   publication:'University of Hull, United Kingdom',
-   pdfUrl: 'pdfs/publication/Lazaro 2018 PhD Thesis.pdf',
-
-  },
-   { id: 13,
-    year : 2013,
-    title: 'The meaning of a healthy family in Sub-Saharan Africa: Perspectives of two-parent families in urban Malawi',
-    authors:'Lazaro, M. C',
-    publication: 'Spring Edmonton,Alberta,Canada',
-    pdfUrl: 'pdfs/publication/Lazaro 2013 MSc Thesis.pdf'
-  }
 ];

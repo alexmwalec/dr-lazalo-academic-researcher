@@ -13,7 +13,7 @@ export const conferenceData = [
   },
   {
     id: 2,
-    year: 2023,
+    year: 2021,
     title: "Invisible in Plain Sight? Grandfathers Caring for Orphaned Grandchildren in Rural Malawi",
     location: "University of East Anglia, Norwich, England",
     authors: "Lazaro, M., Robson, E., & Walker, L.",

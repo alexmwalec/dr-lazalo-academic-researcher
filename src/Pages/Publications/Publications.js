@@ -73,8 +73,7 @@ const Publications = () => {
                 Senior Lecturer, Researcher and Evaluation Consultant
               </p>
 
-              
-                <a href="mailto:mlazaro@unima.ac.mw"
+              <a href="mailto:mlazaro@unima.ac.mw"
                 className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
               >
                 mlazaro@unima.ac.mw
@@ -88,51 +87,50 @@ const Publications = () => {
 
               {/* Social Links */}
               <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
-  <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start">
 
-    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-    >
-      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
-      Google Scholar
-    </a>
+                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                  >
+                    <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
+                    Google Scholar
+                  </a>
 
-    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
-      ResearchGate
-    </a>
+                  <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
+                    ResearchGate
+                  </a>
 
-    <a href="https://orcid.org/0000-0001-5314-0638"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
-      ORCID
-    </a>
+                  <a href="https://orcid.org/0000-0001-5314-0638"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
+                    ORCID
+                  </a>
 
-    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
-      LinkedIn
-    </a>
+                  <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
+                    LinkedIn
+                  </a>
 
-    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
-      Institutional Web Page
-    </a>
+                  <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
+                    Institutional Web Page
+                  </a>
 
-  </div>
-
-            </div>
+                </div>
+              </div>
             </div>
           </aside>
 
@@ -144,8 +142,8 @@ const Publications = () => {
 
             <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
               Peer-review articles and books in the thematic of Early Child Development (ECD)
-              Early Child Education (ECE),older person and ageing,disability,education,
-             food security, and digital sociology.
+              Early Child Education (ECE), older person and ageing, disability, education,
+              food security, and digital sociology.
             </p>
 
             {/* Filter */}
@@ -200,8 +198,7 @@ const Publications = () => {
                     </button>
 
                     {item.pdfUrl && (
-                      
-                      <a  href={item.pdfUrl}
+                      <a href={item.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#b44343] text-sm font-medium hover:text-amber-700"
@@ -231,6 +228,83 @@ const Publications = () => {
                 </div>
               ))}
             </div>
+
+            {/* Unpublished Works - FIXED: Removed duplicate {...} block */}
+            {currentPage === totalPages && (
+              <section className="mt-14">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+                  Unpublished Works
+                </h2>
+
+                <div className="space-y-8">
+
+                  {/* PhD Dissertation */}
+                  <div className="border-b border-gray-200 pb-6">
+                    <div className="text-xs sm:text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
+                      2018
+                    </div>
+
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-medium underline text-[#b44343] mb-3 leading-snug">
+                      Grandfathers Caring for Orphaned Grandchildren in Rural Southern Malawi:
+                      Invisible in Plain Sight?
+                    </h3>
+
+                    <div className="text-gray-700 text-sm mb-2">
+                      <strong>Author:</strong> Lazaro, M. C.
+                    </div>
+
+                    <div className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Doctoral Dissertation, University of Hull, United Kingdom.
+                    </div>
+
+                    <div className="text-sm">
+                      <strong>Repository Link:</strong>{" "}
+                      <a
+                        href="https://hull-repository.worktribe.com/output/4220827"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#b44343] underline hover:text-amber-700"
+                      >
+                        View Dissertation
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Masters Thesis */}
+                  <div className="border-b border-gray-200 pb-6">
+                    <div className="text-xs sm:text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
+                      2013
+                    </div>
+
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-medium underline text-[#b44343] mb-3 leading-snug">
+                      The Meaning of a Healthy Family in Sub-Saharan Africa: Perspectives of
+                      Two-Parent Families in Urban Malawi
+                    </h3>
+
+                    <div className="text-gray-700 text-sm mb-2">
+                      <strong>Author:</strong> Lazaro, M. C.
+                    </div>
+
+                    <div className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Master's Thesis, University of Alberta, Canada.
+                    </div>
+
+                    <div className="text-sm">
+                      <strong>DOI:</strong>{" "}
+                      <a
+                        href="https://doi.org/10.7939/R30D00"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#b44343] underline hover:text-amber-700"
+                      >
+                        10.7939/R30D00
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+            )}
 
             {/* Pagination */}
             {totalPages > 1 && (
