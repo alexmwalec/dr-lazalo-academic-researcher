@@ -165,15 +165,6 @@ const Conference = () => {
                   ? "Hide Details"
                   : "View Details"}
               </button>
-
-              <a
-                href={item.pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#b44343] text-sm font-medium hover:text-amber-700"
-              >
-                View PDF
-              </a>
             </div>
 
             {selectedItem === item.id && (
