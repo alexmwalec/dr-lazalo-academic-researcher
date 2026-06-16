@@ -93,7 +93,7 @@ export const consultancyData = [
     year: 2019,
     title:
       "Consultant – Midline Evaluation: Child Feeding Behaviours Qualitative Study, Njira (Pathways to Sustainable Food Security) Project",
-    client: "Project Concern International / USAID",
+    client: "Project Concern International (funded by USAID) ",
     period: "May – July 2019",
   },
 
@@ -101,7 +101,7 @@ export const consultancyData = [
     year: 2019,
     title:
       "Local Consultant – External Quality Assurance for Support to Implementation of Social Protection for Ultra-Poor People in Malawi",
-    client: "GIZ (sub-contracted to Syspons)",
+    client: "GIZ (contracted to Syspons, Germain )",
     period: "July 2019",
   },
 
@@ -127,7 +127,7 @@ export const consultancyData = [
     title:
       "Qualitative Data Manager – NVivo Remote Support for the Environment and Natural Resources Management (ENREM) Midline Evaluation",
     client:
-      "Kadale Consultants (sub-contracted by Mathematica Policy Research, USA)",
+      "Kadale Consultants (contracted to Mathematica Policy Research, USA)",
     period: "June – November 2018",
   },
 

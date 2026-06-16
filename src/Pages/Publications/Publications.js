@@ -143,9 +143,9 @@ const Publications = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
-              Peer-reviewed publications, book chapters, journal articles, and
-              scholarly contributions in ageing, childhood studies, education,
-              disability studies, food security, and human ecology.
+              Peer-review articles and books in the thematic of Early Child Development (ECD)
+              Early Child Education (ECE),older person and ageing,disability,education,
+             food security, and digital sociology.
             </p>
 
             {/* Filter */}
