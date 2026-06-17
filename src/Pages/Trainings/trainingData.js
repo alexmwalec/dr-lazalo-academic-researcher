@@ -1,6 +1,15 @@
 export const trainingData = [
   {
     id: 1,
+    year: 2026,
+    title: "The Discovery Hub Grant Writing Retreat",
+    location: 'Lecture Theatre, CREATOR Bulding',
+    institution: "Malawi Liverpool Wellcome Programme",
+    date:  "23–27 February 2026",
+    details:" ",
+  },
+  {
+    id: 2,
     year: 2020,
     title: "Write, Publish, Present Workshop",
     location: "Blantyre, Malawi",
@@ -12,7 +21,7 @@ export const trainingData = [
   },
 
   {
-    id: 2,
+    id: 3,
     year: 2019,
     title: "Research Management Workshop",
     location: "Mangochi, Malawi",
@@ -24,7 +33,7 @@ export const trainingData = [
   },
 
   {
-    id: 3,
+    id: 4,
     year: 2019,
     title:
       "Master Class – Portraying Old Age and Ageing to Counter Ageism",
@@ -37,7 +46,7 @@ export const trainingData = [
   },
 
   {
-    id: 4,
+    id: 5,
     year: 2017,
     title:
       "Colloquium: Demystifying Qualitative Analysis",
@@ -49,7 +58,7 @@ export const trainingData = [
   },
 
   {
-    id: 5,
+    id: 6,
     year: 2015,
     title:
       "Researchers in Development Network (RiDNet) Conference",
@@ -61,7 +70,7 @@ export const trainingData = [
   },
 
   {
-    id: 6,
+    id: 7,
     year: 2015,
     title:
       "Researching with Children and Young People in Diverse Socio-spatial Contexts",
@@ -73,7 +82,7 @@ export const trainingData = [
   },
 
   {
-    id: 7,
+    id: 8,
     year: 2015,
     title:
       "Family Troubles: Care and Change in Diverse Contexts",
@@ -85,7 +94,7 @@ export const trainingData = [
   },
 
   {
-    id: 8,
+    id: 9,
     year: 2015,
     title:
       "The 6th PhD Experience Conference",
@@ -97,7 +106,7 @@ export const trainingData = [
   },
 
   {
-    id: 9,
+    id: 10,
     year: 2011,
     title:
       "Knowledge Exchange Institute for Geriatric Nursing, Medical & Social Work Education Conference",
@@ -109,7 +118,7 @@ export const trainingData = [
   },
 
   {
-    id: 10,
+    id: 11,
     year: 2016,
     title: "NVivo for Qualitative Data Analysis",
     location: "Hull, United Kingdom",
@@ -120,7 +129,7 @@ export const trainingData = [
   },
 
   {
-    id: 11,
+    id: 12,
     year: 2016,
     title: "Advanced Word Processing",
     location: "Hull, United Kingdom",

@@ -122,7 +122,7 @@ const Trainings = () => {
                   </div>
 
                   {selectedItem === item.id && (
-                    <div className="mt-4 sm:mt-6 bg-amber-50/40 p-4 sm:p-5 rounded-lg border-l-4 border-amber-600">
+                    <div className="">
                       {item.description && (
                         <div>
                           <h3 className="font-semibold text-black mb-2 text-base">
