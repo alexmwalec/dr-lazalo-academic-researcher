@@ -62,7 +62,7 @@ const Sidebar = () => {
         <div className="mt-4 lg:mt-6">
           <div>
             <div className="space-y-1 text-base  leading-7 text-[#333] max-w-5xl">
-              <p className="text-gray-900 font-medium">University of Malawi</p>
+              <p className="text-gray-900">University of Malawi</p>
               <p className="text-gray-900">School of Natural and Applied Sciences</p>
               <p className="text-gray-900">Human Ecology and Agricultural Sciences Department</p>
               <p className="text-gray-900">P.O. Box 280</p>
