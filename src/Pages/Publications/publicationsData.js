@@ -10,6 +10,7 @@ export const publicationsData = [
     pdfUrl: "#",
     doi: " #", 
     coAuthors: [],
+    abstract:' '
   },
 
   {
@@ -28,6 +29,7 @@ export const publicationsData = [
       "Ikram Sadiq, Sheffield Hallam University, United Kingdom",
       "Melis Tekin, University of Sheffield, United Kingdom",
     ],
+    abstract:' '
   },
 
   {
@@ -45,6 +47,7 @@ export const publicationsData = [
       "Senjooti Roy, Bar Ilan University, Israel",
       "Liat Ayalon, Bar Ilan University, Israel",
     ],
+    abstract:' '
   },
 
   {
@@ -65,6 +68,7 @@ export const publicationsData = [
       "Alinafe Ireen Chibwana, CRECCOM",
       "John Juliano Sileti, University of Malawi",
     ],
+    abstract:' '
   },
 
   {
@@ -78,6 +82,7 @@ export const publicationsData = [
     pdfUrl: "#",
     doi: "https://doi.org/10.5678/mjss.2026.002",
     coAuthors: [],
+    abstract:' '
   },
 
   {
@@ -95,6 +100,7 @@ export const publicationsData = [
       "Kalia Kaparounaki, University of Dundee, UK",
       "Susan Levy, University of Dundee, UK",
     ],
+   abstract:' '
   },
 
   {
@@ -108,6 +114,7 @@ export const publicationsData = [
     pdfUrl: "pdfs/publication/Lazaro 2024 - Corporal Punishment.pdf",
     // No DOI - has PDF
     coAuthors: [],
+    abstract:' '
   },
 
   {
@@ -120,7 +127,6 @@ export const publicationsData = [
     publication:
       "Journal of Education and Development, 8(3), 20.",
     pdfUrl: "pdfs/publication/Ejuu et al 2024 Scaling Child to Child Approach.pdf",
-    // No DOI - has PDF
     coAuthors: [
       "Godfrey Ejuu, Kyambogo University",
       "Rucecerwa Adela, Kyambogo University",
@@ -129,6 +135,7 @@ export const publicationsData = [
       "Audo Jesca, Kyambogo University",
       "Nandera Miria, Kyambogo University",
     ],
+    abstract:' '
   },
 
   {
@@ -160,6 +167,7 @@ export const publicationsData = [
       "Helen Tanielu, National University of Samoa",
       "Liz Walker, University of Hull",
     ],
+    abstract:' '
   },
 
   {
@@ -177,6 +185,7 @@ export const publicationsData = [
       "Liz Walker, University of Hull",
       "Elsbeth Robson, University of Hull",
     ],
+    abstract:' '
   },
 
   {
@@ -199,5 +208,6 @@ export const publicationsData = [
       "Patricia Rea, National University Autonomous of Mexico",
       "Prakash Tyagi, GRAVIS India",
     ],
+    abstract:' '
   },
 ];

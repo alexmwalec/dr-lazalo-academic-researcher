@@ -221,11 +221,12 @@ const Publications = () => {
                     )}
                   </div>
 
-                  {/* Details Panel */}
+                  {/* Details Panel - Co-Authors and Abstract */}
                   {selectedItem === item.id && (
                     <div className="mt-4 sm:mt-6 bg-amber-50/40 p-4 sm:p-5 rounded-lg border-l-4 border-amber-600">
+                      {/* Co-Authors Section */}
                       {item.coAuthors && item.coAuthors.length > 0 && (
-                        <div>
+                        <div className="mb-4">
                           <h3 className="font-semibold text-black mb-3 text-sm sm:text-base">
                             Co-Authors
                           </h3>
@@ -234,6 +235,18 @@ const Publications = () => {
                               <li key={index}>• {author}</li>
                             ))}
                           </ul>
+                        </div>
+                      )}
+
+                      {/* Abstract Section */}
+                      {item.abstract && (
+                        <div>
+                          <h3 className="font-semibold text-black mb-3 text-sm sm:text-base">
+                            Abstract
+                          </h3>
+                          <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            {item.abstract}
+                          </p>
                         </div>
                       )}
                     </div>
