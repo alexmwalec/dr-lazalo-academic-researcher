@@ -173,10 +173,7 @@ const Teaching = () => {
                 </h2>
                 <p className="leading-7 sm:leading-8 text-sm sm:text-base">
                   At the postgraduate level, I have taught the{" "}
-                  <strong>Household Environmental Management</strong> module and
-                  have supervised postgraduate research in areas related to
-                  family studies, ageing, community development, early childhood
-                  development, and qualitative research methodologies.
+                  Household Environmental Management, Food Science and Nutrition Seminar, and Research Methodologies modules
                 </p>
               </div>
 
