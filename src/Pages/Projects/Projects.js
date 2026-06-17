@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { SiGooglescholar, SiOrcid } from "react-icons/si";
@@ -7,6 +7,7 @@ import humanity from "../../Images/humanity.jpg";
 
 const projects = [
   {
+    id: 1,
     title: "Strengthening Malawi's ECD Management Information System (T4ECE)",
     role: "Co-Investigator",
     period: "February 2024 – December 2024",
@@ -14,40 +15,42 @@ const projects = [
     funder: "USAID – Together for Early Childhood Evidence (T4ECE), USA",
   },
   {
-    title:
-      "Child-to-Child Learning Approach: Scaling Up Inclusive Play-Based Learning for Smooth Transition from Pre-Primary to Early Grades",
+    id: 2,
+    title: "Child-to-Child Learning Approach: Scaling Up Inclusive Play-Based Learning for Smooth Transition from Pre-Primary to Early Grades",
     role: "Co-Principal Investigator; later Project Lead for Malawi",
     period: "May 2022 – November 2023",
     value: "$94,755.43",
     funder: "International Development Research Centre (IDRC), Canada",
   },
   {
-    title:
-      "Complementary Feeding Bowl Pilot Project: Integration of an Infant and Young Child Feeding (IYCF) Toolkit",
+    id: 3,
+    title: "Complementary Feeding Bowl Pilot Project: Integration of an Infant and Young Child Feeding (IYCF) Toolkit",
     role: "Co-Investigator; later Project Lead for Endline Evaluation",
     period: "November 2022 – November 2023",
     value: "$135,000",
     funder: "UNICEF, Malawi",
   },
   {
-    title:
-      "Improving Secondary Education in Malawi (ISEM) Phase I & II – Continuous Professional Development (CPD)",
+    id: 4,
+    title: "Improving Secondary Education in Malawi (ISEM) Phase I & II – Continuous Professional Development (CPD)",
     role: "Expert Member and Manual Editor",
     period: "December 2022 – November 2023",
     value: "€36,409",
     funder: "European Union (EU)",
+   
   },
   {
-    title:
-      "Energy Provision in Developing Countries: Understanding Private Sector Challenges of Scaling Up Energy Access in Uganda, Tanzania, and Malawi",
+    id: 5,
+    title: "Energy Provision in Developing Countries: Understanding Private Sector Challenges of Scaling Up Energy Access in Uganda, Tanzania, and Malawi",
     role: "Co-Investigator",
     period: "June 2020 – June 2021",
     value: "£5,000",
     funder: "Global Challenges Research Fund (GCRF), United Kingdom",
+    
   },
   {
-    title:
-      "Promoting Farmers' Rights and Collective Marketing for Sustainable Food Security (Pro-Farmer Project)",
+    id: 6,
+    title: "Promoting Farmers' Rights and Collective Marketing for Sustainable Food Security (Pro-Farmer Project)",
     role: "Monitoring and Evaluation Manager",
     period: "June 2018 – June 2019",
     value: "$120,000",
@@ -56,6 +59,12 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleViewDetails = (id) => {
+    setSelectedItem(selectedItem === id ? null : id);
+  };
+
   return (
     <div className="min-h-screen bg-slate-100">
       <Header />
@@ -94,12 +103,11 @@ const Projects = () => {
                 Senior Lecturer, Researcher and Evaluation Consultant
               </p>
 
-              
-                <a href="mailto:mlazaro@unima.ac.mw"
-                  className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
-                >
-                  mlazaro@unima.ac.mw
-                </a>
+              <a href="mailto:mlazaro@unima.ac.mw"
+                className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
+              >
+                mlazaro@unima.ac.mw
+              </a>
 
               <div className="mt-4 lg:mt-8 text-gray-700 font-semibold leading-relaxed text-sm sm:text-base">
                 Human Ecology and Agricultural Sciences Department
@@ -108,51 +116,51 @@ const Projects = () => {
               </div>
 
               {/* Social Links */}
-               <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
-  <div className="flex flex-col items-start">
+              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-start">
 
-    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-    >
-      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
-      Google Scholar
-    </a>
+                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                  >
+                    <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
+                    Google Scholar
+                  </a>
 
-    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
-      ResearchGate
-    </a>
+                  <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
+                    ResearchGate
+                  </a>
 
-    <a href="https://orcid.org/0000-0001-5314-0638"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
-      ORCID
-    </a>
+                  <a href="https://orcid.org/0000-0001-5314-0638"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
+                    ORCID
+                  </a>
 
-    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
-      LinkedIn
-    </a>
+                  <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
+                    LinkedIn
+                  </a>
 
-    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
-      Institutional Web Page
-    </a>
+                  <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
+                    Institutional Web Page
+                  </a>
 
-  </div>
-</div>
+                </div>
+              </div>
             </div>
           </aside>
 
@@ -167,12 +175,12 @@ const Projects = () => {
             </p>
 
             <div className="space-y-8 sm:space-y-12 text-[#2b3b34]">
-              {projects.map((project, index) => (
-                 <div
-                  key={index}
-                  className="sm:pl-6"
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="sm:pl-6 border-b border-gray-200 pb-6 sm:pb-8 last:border-0"
                 >
-                 <h2 className="text-lg sm:text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700 leading-snug">
+                  <h2 className="text-lg sm:text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700 leading-snug">
                     {project.title}
                   </h2>
 
@@ -190,6 +198,16 @@ const Projects = () => {
                       <strong>Funder:</strong> {project.funder}
                     </p>
                   </div>
+
+                  {/* View Details Button */}
+                  <div className="flex items-center gap-4 sm:gap-6 mt-4 flex-wrap">
+                    <button
+                      onClick={() => handleViewDetails(project.id)}
+                      className="text-amber-700 text-sm font-medium hover:text-amber-800"
+                    >
+                      {selectedItem === project.id ? "Hide Details" : "View Details"}
+                    </button>
+                  </div>                  
                 </div>
               ))}
             </div>
