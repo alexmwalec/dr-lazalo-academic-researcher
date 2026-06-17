@@ -66,7 +66,7 @@ const Consultancy = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-xl sm:text-xl font-bold mb-3 sm:mb-4">
               Consultancy
             </h1>
 
@@ -105,7 +105,7 @@ const Consultancy = () => {
                     key={item.id}
                     className="border-b border-gray-200 pb-6 last:border-0"
                   >
-                    <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
+                    <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                       {item.title}
                     </h2>
 

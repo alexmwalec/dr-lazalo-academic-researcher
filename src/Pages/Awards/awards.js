@@ -32,7 +32,7 @@ const Awards = () => {
 
             {/* Qualifications */}
             <section className="mb-8 sm:mb-10">
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#b44343] mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                 Qualifications
               </h2>
 
@@ -57,7 +57,7 @@ const Awards = () => {
 
             {/* Awards */}
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#b44343] mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                 Awards
               </h2>
 

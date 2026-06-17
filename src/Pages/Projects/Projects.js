@@ -88,7 +88,7 @@ const Projects = () => {
               Projects & Grants
             </h1>
 
-            <p className="text-lg text-gray-700 mb-6 sm:mb-10 leading-7">
+            <p className="text-base text-gray-700 mb-6 sm:mb-10 leading-7">
               Selected projects and grants undertaken through local and international collaborations and partnerships
             </p>
 
@@ -98,7 +98,7 @@ const Projects = () => {
                   key={project.id}
                   className="sm:pl-6 border-b border-gray-200 pb-6 last:border-0"
                 >
-                  <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
+                  <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                     {project.title}
                   </h2>
 

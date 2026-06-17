@@ -45,7 +45,7 @@ const Header = () => {
           {/* Name / Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold text-gray-900 whitespace-nowrap hover:text-rose-700"
+            className="text-xl sm:text-2xl font-bold  mb-3 leading-snug whitespace-nowrap hover:text-rose-700"
           >
             Mayeso Chinseu Lazaro
           </Link>
