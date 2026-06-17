@@ -107,7 +107,7 @@ const Conference = () => {
                     <div className="flex items-center gap-4 sm:gap-6 mt-3 flex-wrap">
                       <button
                         onClick={() => handleViewDetails(item.id)}
-                        className="text-amber-700 text-sm font-medium hover:text-amber-800"
+                        className="text-amber-700 text-base font-medium hover:text-amber-800"
                       >
                         {selectedItem === item.id
                           ? "Hide Details"

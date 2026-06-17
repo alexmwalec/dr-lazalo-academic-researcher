@@ -52,7 +52,7 @@ const Trainings = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Trainings & Workshops
             </h1>
 

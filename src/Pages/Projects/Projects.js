@@ -121,7 +121,7 @@ const Projects = () => {
                   <div className="flex items-center gap-4 sm:gap-6 mt-3 flex-wrap">
                     <button
                       onClick={() => handleViewDetails(project.id)}
-                      className="text-amber-700 text-sm font-medium hover:text-amber-800"
+                      className="text-amber-700 text-base font-medium hover:text-amber-800"
                     >
                       {selectedItem === project.id ? "Hide Details" : "View Details"}
                     </button>

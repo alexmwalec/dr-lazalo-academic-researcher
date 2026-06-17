@@ -109,7 +109,7 @@ const Publications = () => {
                   <div className="flex items-center gap-4 sm:gap-6 mt-3 flex-wrap">
                     <button
                       onClick={() => handleViewDetails(item.id)}
-                      className="text-amber-700 text-sm font-medium hover:text-amber-800"
+                      className="text-amber-700 text-base font-medium hover:text-amber-800"
                     >
                       {selectedItem === item.id ? "Hide Details" : "View Details"}
                     </button>
@@ -120,7 +120,7 @@ const Publications = () => {
                         href={item.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#b44343] text-sm font-medium hover:text-amber-700"
+                        className="text-[#b44343] text-base font-medium hover:text-amber-700"
                       >
                         View PDF
                       </a>
@@ -131,7 +131,7 @@ const Publications = () => {
                         href={item.doi}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#b44343] text-sm font-medium hover:text-amber-700"
+                        className="text-[#b44343] text-base font-medium hover:text-amber-700"
                       >
                         DOI
                       </a>
