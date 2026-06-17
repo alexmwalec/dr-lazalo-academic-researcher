@@ -21,6 +21,7 @@ import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
 import  ProfessorCard from "./Pages/ProfessionalCard/ProfessorCard";
 import SocialShareBar from "./Pages/SocialShareBar/SocialShareBar";
+import Sidebar from "./Pages/Sidebar/Sidebar";  
 import Footer from "./Pages/Footer/Footer";
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/supervision" element={<Supervision />} />
         <Route path="/header" element={<Header />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/social-share" element={<SocialShareBar />} />
       </Routes>
     </BrowserRouter>

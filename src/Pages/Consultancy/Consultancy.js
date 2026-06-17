@@ -3,12 +3,12 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { consultancyData } from "./consultancyData";
 import humanity from "../../Images/humanity.jpg";
-import { FaLinkedinIn, FaResearchgate, FaGlobe } from "react-icons/fa";
-import { SiOrcid, SiGooglescholar } from "react-icons/si";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Consultancy = () => {
   const [selectedYear, setSelectedYear] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedItem, setSelectedItem] = useState(null); 
 
   const ITEMS_PER_PAGE = 5;
 
@@ -20,11 +20,17 @@ const Consultancy = () => {
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
     setCurrentPage(1);
+    setSelectedItem(null); // Close details when filtering
   };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
+    setSelectedItem(null); // Close details when changing page
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleViewDetails = (id) => {
+    setSelectedItem(selectedItem === id ? null : id);
   };
 
   const filteredData =
@@ -42,7 +48,6 @@ const Consultancy = () => {
     <div className="min-h-screen bg-slate-100">
       <Header />
 
-       
       {/* Banner */}
       <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
@@ -56,90 +61,8 @@ const Consultancy = () => {
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-
-          {/* Sidebar */}
-          <aside className="w-full lg:w-[280px] lg:-mt-24 flex flex-col items-center lg:items-start">
-
-            {/* Profile Image */}
-            <div className="mt-[-60px] lg:mt-0">
-              <img
-                src="/profile.jpg"
-                alt="Mayeso Lazaro"
-                className="w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[220px] lg:h-[220px] rounded-full border-4 border-white shadow-lg object-cover"
-              />
-            </div>
-
-            <div className="mt-4 lg:mt-5 text-center lg:text-left w-full px-2 lg:px-0">
-              <h2 className="text-[18px] sm:text-[20px] lg:text-[22px] font-bold leading-tight">
-                Mayeso Chinseu Lazaro
-              </h2>
-
-              <p className="text-gray-700 mt-1 text-sm sm:text-base">
-                Senior Lecturer, Researcher and Evaluation Consultant
-              </p>
-
-              
-                <a href="mailto:mlazaro@unima.ac.mw"
-                className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
-              >
-                mlazaro@unima.ac.mw
-              </a>
-
-              <div className="mt-4 lg:mt-8 text-gray-700 font-semibold leading-relaxed text-sm sm:text-base">
-                Human Ecology and Agricultural Sciences Department
-                <br />
-                University of Malawi
-              </div>
-
-              {/* Social Links */}
-              <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
-  <div className="flex flex-col items-start">
-
-    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-    >
-      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
-      Google Scholar
-    </a>
-
-    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
-      ResearchGate
-    </a>
-
-    <a href="https://orcid.org/0000-0001-5314-0638"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
-      ORCID
-    </a>
-
-    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
-      LinkedIn
-    </a>
-
-    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
-      Institutional Web Page
-    </a>
-
-  </div>
-
-            </div>
-            </div>
-          </aside>
+        
+         <Sidebar />
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
@@ -172,69 +95,105 @@ const Consultancy = () => {
 
             {/* Consultancy Cards */}
             <div className="space-y-6 sm:space-y-8">
-              {currentItems.map((item, index) => (
-                <div
-                  key={index}
-                  className=" sm:pl-6 py-2"
-                >
-                  <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
-                    {item.title}
-                  </h2>
-
-                  <div className="space-y-1 sm:space-y-2 text-gray-800 text-sm sm:text-base">
-                    <p>
-                      <strong>Client:</strong> {item.client}
-                    </p>
-                    <p>
-                      <strong>Period:</strong> {item.period}
-                    </p>
-                    <p>
-                      <strong>Year:</strong> {item.year}
-                    </p>
-                  </div>
+              {currentItems.length === 0 ? (
+                <div className="text-center py-10 text-gray-500 text-base">
+                  No consultancy records found for {selectedYear}.
                 </div>
-              ))}
+              ) : (
+                currentItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className="border-b border-gray-200 pb-6 sm:pb-8 last:border-0"
+                  >
+                    <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
+                      {item.title}
+                    </h2>
+
+                    <div className="space-y-1 sm:space-y-2 text-gray-800 text-sm sm:text-base">
+                      <p>
+                        <strong>Client:</strong> {item.client}
+                      </p>
+                      <p>
+                        <strong>Period:</strong> {item.period}
+                      </p>
+                      <p>
+                        <strong>Year:</strong> {item.year}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-4 sm:gap-6 mt-4">
+                      <button
+                        onClick={() => handleViewDetails(item.id)}
+                        className="text-amber-700 text-sm font-medium hover:text-amber-800"
+                      >
+                        {selectedItem === item.id
+                          ? "Hide Details"
+                          : "View Details"}
+                      </button>
+                    </div>
+
+                    {selectedItem === item.id && (
+                      <div className="mt-4 sm:mt-6 bg-amber-50/40 p-4 sm:p-5 rounded-lg border-l-4 border-amber-600">
+                        {item.description && (
+                          <div>
+                            <h3 className="font-semibold text-black mb-2 text-sm sm:text-base">
+                              Description
+                            </h3>
+                            <p className="text-gray-700 text-sm leading-relaxed">
+                              {item.description}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))
+              )}
             </div>
 
             {/* Pagination */}
-            <div className="flex justify-center items-center gap-1 sm:gap-2 mt-8 sm:mt-10 flex-wrap">
-              <button
-                onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
-                disabled={currentPage === 1}
-                className="px-3 sm:px-4 py-2 border rounded bg-white disabled:opacity-50 text-sm"
-              >
-                Previous
-              </button>
-
-              {[...Array(totalPages)].map((_, index) => (
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-8 sm:mt-10 flex-wrap">
                 <button
-                  key={index}
-                  onClick={() => handlePageChange(index + 1)}
-                  className={`px-3 sm:px-4 py-2 border rounded text-sm ${
-                    currentPage === index + 1
-                      ? "bg-[#b44343] text-white border-[#b44343]"
-                      : "bg-white hover:bg-gray-100"
-                  }`}
+                  onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 sm:px-4 py-2 border rounded bg-white disabled:opacity-50 text-sm"
                 >
-                  {index + 1}
+                  Previous
                 </button>
-              ))}
 
-              <button
-                onClick={() =>
-                  handlePageChange(Math.min(currentPage + 1, totalPages))
-                }
-                disabled={currentPage === totalPages}
-                className="px-3 sm:px-4 py-2 border rounded bg-white disabled:opacity-50 text-sm"
-              >
-                Next
-              </button>
-            </div>
+                {[...Array(totalPages)].map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePageChange(index + 1)}
+                    className={`px-3 sm:px-4 py-2 border rounded text-sm ${
+                      currentPage === index + 1
+                        ? "bg-[#b44343] text-white border-[#b44343]"
+                        : "bg-white hover:bg-gray-100"
+                    }`}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() =>
+                    handlePageChange(Math.min(currentPage + 1, totalPages))
+                  }
+                  disabled={currentPage === totalPages}
+                  className="px-3 sm:px-4 py-2 border rounded bg-white disabled:opacity-50 text-sm"
+                >
+                  Next
+                </button>
+              </div>
+            )}
 
             {/* Page Info */}
-            <div className="text-center text-gray-600 mt-4 text-sm sm:text-base">
-              Page {currentPage} of {totalPages}
-            </div>
+            {filteredData.length > 0 && (
+              <div className="text-center text-gray-600 mt-4 text-sm sm:text-base">
+                Page {currentPage} of {totalPages}
+              </div>
+            )}
           </main>
         </div>
       </div>
