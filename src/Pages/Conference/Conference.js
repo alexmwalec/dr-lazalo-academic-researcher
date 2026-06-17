@@ -26,7 +26,7 @@ const Conference = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
       {/* Banner */}
       <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
@@ -46,11 +46,11 @@ const Conference = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Conference Contributions
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
+            <p className="text-lg text-gray-700 mb-4 sm:mb-6 leading-7">
               International and regional presentations on ageing, family studies,
               childhood research, development studies, and social sciences.
             </p>
@@ -77,34 +77,34 @@ const Conference = () => {
             </div>
 
             {/* Conference List */}
-            <div className="space-y-8 sm:space-y-10">
+            <div className="space-y-6">
               {filteredData.length === 0 ? (
-                <div className="text-center py-10 text-gray-500 text-base">
+                <div className="text-center py-10 text-gray-500 text-lg">
                   No conference presentations found for {selectedYear}.
                 </div>
               ) : (
                 filteredData.map((item) => (
                   <div
                     key={item.id}
-                    className="border-b border-gray-200 pb-6 sm:pb-8"
+                    className="border-b border-gray-200 pb-6"
                   >
-                    <div className="text-xs sm:text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
+                    <div className="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
                       {item.year}
                     </div>
 
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-[#b44343] mb-3 leading-snug">
+                    <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                       {item.title}
                     </h2>
 
-                    <div className="text-gray-700 text-sm mb-2">
+                    <div className="text-gray-700 text-lg leading-7 mb-2">
                       {item.location}
                     </div>
 
-                    <div className="text-gray-600 text-sm mb-3">
+                    <div className="text-gray-600 text-lg leading-7 mb-3">
                       {item.authors}
                     </div>
 
-                    <div className="flex items-center gap-4 sm:gap-6 mt-4 flex-wrap">
+                    <div className="flex items-center gap-4 sm:gap-6 mt-3 flex-wrap">
                       <button
                         onClick={() => handleViewDetails(item.id)}
                         className="text-amber-700 text-sm font-medium hover:text-amber-800"
@@ -122,7 +122,7 @@ const Conference = () => {
                             <span className="text-xs font-semibold text-black uppercase tracking-wide">
                               Conference
                             </span>
-                            <p className="text-gray-700 text-sm mt-1">
+                            <p className="text-gray-700 text-lg leading-7 mt-1">
                               {item.conference}
                             </p>
                           </div>
@@ -131,7 +131,7 @@ const Conference = () => {
                             <span className="text-xs font-semibold text-black uppercase tracking-wide">
                               Date
                             </span>
-                            <p className="text-gray-700 text-sm mt-1">
+                            <p className="text-gray-700 text-lg leading-7 mt-1">
                               {item.date}
                             </p>
                           </div>
@@ -140,7 +140,7 @@ const Conference = () => {
                             <span className="text-xs font-semibold text-black uppercase tracking-wide">
                               Full Citation
                             </span>
-                            <p className="text-gray-600 text-sm italic mt-1 leading-relaxed">
+                            <p className="text-gray-600 text-lg italic leading-7 mt-1">
                               {item.citation}
                             </p>
                           </div>

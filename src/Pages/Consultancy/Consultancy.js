@@ -20,12 +20,12 @@ const Consultancy = () => {
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
     setCurrentPage(1);
-    setSelectedItem(null); // Close details when filtering
+    setSelectedItem(null);
   };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    setSelectedItem(null); // Close details when changing page
+    setSelectedItem(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -45,7 +45,7 @@ const Consultancy = () => {
   const currentItems = filteredData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
       {/* Banner */}
@@ -62,7 +62,7 @@ const Consultancy = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
         
-         <Sidebar />
+          <Sidebar />
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
@@ -70,13 +70,13 @@ const Consultancy = () => {
               Consultancy
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
+            <p className="text-lg text-gray-700 mb-6 sm:mb-8 leading-7">
               The following engagements reflect applied research, evaluation,
               and advisory roles undertaken alongside academic responsibilities.
             </p>
 
             {/* Filter */}
-            <div className="mb-8 sm:mb-10">
+            <div className="mb-6 sm:mb-8">
               <label className="font-semibold mr-3 text-sm sm:text-base">
                 Filter by Year:
               </label>
@@ -94,22 +94,22 @@ const Consultancy = () => {
             </div>
 
             {/* Consultancy Cards */}
-            <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-6">
               {currentItems.length === 0 ? (
-                <div className="text-center py-10 text-gray-500 text-base">
+                <div className="text-center py-10 text-gray-500 text-lg">
                   No consultancy records found for {selectedYear}.
                 </div>
               ) : (
                 currentItems.map((item) => (
                   <div
                     key={item.id}
-                    className="border-b border-gray-200 pb-6 sm:pb-8 last:border-0"
+                    className="border-b border-gray-200 pb-6 last:border-0"
                   >
                     <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                       {item.title}
                     </h2>
 
-                    <div className="space-y-1 sm:space-y-2 text-gray-800 text-sm sm:text-base">
+                    <div className="space-y-1 text-lg text-gray-800 leading-7">
                       <p>
                         <strong>Client:</strong> {item.client}
                       </p>
@@ -121,7 +121,7 @@ const Consultancy = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-4 sm:gap-6 mt-4">
+                    <div className="flex items-center gap-4 sm:gap-6 mt-3">
                       <button
                         onClick={() => handleViewDetails(item.id)}
                         className="text-amber-700 text-sm font-medium hover:text-amber-800"
@@ -136,10 +136,10 @@ const Consultancy = () => {
                       <div className="mt-4 sm:mt-6 bg-amber-50/40 p-4 sm:p-5 rounded-lg border-l-4 border-amber-600">
                         {item.description && (
                           <div>
-                            <h3 className="font-semibold text-black mb-2 text-sm sm:text-base">
+                            <h3 className="font-semibold text-black mb-2 text-base">
                               Description
                             </h3>
-                            <p className="text-gray-700 text-sm leading-relaxed">
+                            <p className="text-lg text-gray-700 leading-7">
                               {item.description}
                             </p>
                           </div>
@@ -153,7 +153,7 @@ const Consultancy = () => {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-8 sm:mt-10 flex-wrap">
+              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-6 sm:mt-8 flex-wrap">
                 <button
                   onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                   disabled={currentPage === 1}
@@ -190,7 +190,7 @@ const Consultancy = () => {
 
             {/* Page Info */}
             {filteredData.length > 0 && (
-              <div className="text-center text-gray-600 mt-4 text-sm sm:text-base">
+              <div className="text-center text-gray-600 mt-4 text-lg">
                 Page {currentPage} of {totalPages}
               </div>
             )}

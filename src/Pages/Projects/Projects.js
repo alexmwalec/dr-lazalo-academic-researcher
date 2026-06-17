@@ -36,7 +36,6 @@ const projects = [
     period: "December 2022 – November 2023",
     value: "€36,409",
     funder: "European Union (EU)",
-   
   },
   {
     id: 5,
@@ -45,7 +44,6 @@ const projects = [
     period: "June 2020 – June 2021",
     value: "£5,000",
     funder: "Global Challenges Research Fund (GCRF), United Kingdom",
-    
   },
   {
     id: 6,
@@ -65,7 +63,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
       {/* Banner */}
@@ -82,7 +80,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
-           <Sidebar />
+          <Sidebar />
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
@@ -90,21 +88,21 @@ const Projects = () => {
               Projects & Grants
             </h1>
 
-            <p className="text-base sm:text-xl text-gray-700 mb-6 sm:mb-10">
+            <p className="text-lg text-gray-700 mb-6 sm:mb-10 leading-7">
               Selected projects and grants undertaken through local and international collaborations and partnerships
             </p>
 
-            <div className="space-y-8 sm:space-y-12 text-[#2b3b34]">
+            <div className="space-y-6 text-[#2b3b34]">
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="sm:pl-6 border-b border-gray-200 pb-6 sm:pb-8 last:border-0"
+                  className="sm:pl-6 border-b border-gray-200 pb-6 last:border-0"
                 >
-                  <h2 className="text-lg sm:text-2xl font-semibold text-[#b44343] mb-3 hover:text-rose-700 leading-snug">
+                  <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                     {project.title}
                   </h2>
 
-                  <div className="space-y-1 sm:space-y-2 text-sm sm:text-base">
+                  <div className="space-y-1 text-lg leading-7">
                     <p>
                       <strong>Role:</strong> {project.role}
                     </p>
@@ -120,14 +118,14 @@ const Projects = () => {
                   </div>
 
                   {/* View Details Button */}
-                  <div className="flex items-center gap-4 sm:gap-6 mt-4 flex-wrap">
+                  <div className="flex items-center gap-4 sm:gap-6 mt-3 flex-wrap">
                     <button
                       onClick={() => handleViewDetails(project.id)}
                       className="text-amber-700 text-sm font-medium hover:text-amber-800"
                     >
                       {selectedItem === project.id ? "Hide Details" : "View Details"}
                     </button>
-                  </div>                  
+                  </div>
                 </div>
               ))}
             </div>

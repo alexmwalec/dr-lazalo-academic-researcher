@@ -33,7 +33,7 @@ const Trainings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
       <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
@@ -52,18 +52,18 @@ const Trainings = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
               Trainings & Workshops
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
+            <p className="text-lg text-gray-700 mb-6 sm:mb-8 leading-7">
               Professional trainings, workshops, conferences, research
               capacity-building programmes, and academic development activities
               attended over the years.
             </p>
 
             {/* Filter */}
-            <div className="mb-8 sm:mb-10">
+            <div className="mb-6 sm:mb-8">
               <label className="font-semibold mr-3 text-sm sm:text-base">
                 Filter by Year:
               </label>
@@ -84,33 +84,33 @@ const Trainings = () => {
             </div>
 
             {/* Training List */}
-            <div className="space-y-8 sm:space-y-10">
+            <div className="space-y-6">
               {currentItems.map((item) => (
                 <div
                   key={item.id}
-                  className="border-b border-gray-200 pb-6 sm:pb-8"
+                  className="border-b border-gray-200 pb-6"
                 >
-                  <div className="text-xs sm:text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
+                  <div className="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
                     {item.year}
                   </div>
 
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-[#b44343] mb-3 leading-snug">
+                  <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-2 leading-snug">
                     {item.title}
                   </h2>
 
-                  <div className="text-gray-700 text-xs sm:text-sm mb-2">
+                  <div className="text-gray-700 text-lg leading-7 mb-2">
                     <strong>Institution:</strong> {item.institution}
                   </div>
 
-                  <div className="text-gray-700 text-xs sm:text-sm mb-2">
+                  <div className="text-gray-700 text-lg leading-7 mb-2">
                     <strong>Location:</strong> {item.location}
                   </div>
 
-                  <div className="text-gray-700 text-xs sm:text-sm">
+                  <div className="text-gray-700 text-lg leading-7">
                     <strong>Date:</strong> {item.date}
                   </div>
 
-                  <div className="flex items-center gap-4 sm:gap-6 mt-4 ">
+                  <div className="flex items-center gap-4 sm:gap-6 mt-3">
                     <button
                       onClick={() => handleViewDetails(item.id)}
                       className="text-amber-700 text-sm font-medium hover:text-amber-800"
@@ -122,13 +122,13 @@ const Trainings = () => {
                   </div>
 
                   {selectedItem === item.id && (
-                    <div className="mt-4 sm:mt-6">
+                    <div className="mt-4 sm:mt-6 bg-amber-50/40 p-4 sm:p-5 rounded-lg border-l-4 border-amber-600">
                       {item.description && (
                         <div>
-                          <h3 className="font-semibold text-black mb-2 text-sm sm:text-base">
+                          <h3 className="font-semibold text-black mb-2 text-base">
                             Description
                           </h3>
-                          <p className="text-gray-700 text-sm leading-relaxed">
+                          <p className="text-gray-700 text-lg leading-7">
                             {item.description}
                           </p>
                         </div>
@@ -141,7 +141,7 @@ const Trainings = () => {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-8 sm:mt-10 flex-wrap">
+              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-6 sm:mt-8 flex-wrap">
                 <button
                   onClick={() =>
                     setCurrentPage((prev) => Math.max(prev - 1, 1))

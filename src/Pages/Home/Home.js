@@ -18,7 +18,6 @@ const Home = () => {
   const [showCV, setShowCV] = useState(false);
   const containerRef = useRef(null);
 
-  // Disable right-click, print/save/devtools shortcuts on this page
   useEffect(() => {
     const handleContextMenu = (e) => e.preventDefault();
 
@@ -63,16 +62,14 @@ const Home = () => {
   const goToNextPage = () =>
     setPageNumber((prev) => Math.min(prev + 1, numPages));
 
-  // FIXED: Toggle CV visibility instead of just showing
   const toggleCV = () => {
     setShowCV(!showCV);
-    // Reset page number when hiding
     if (showCV) {
       setPageNumber(1);
     }
   };
 
-  // FIXED: Scroll to CV when showing, but only if becoming visible
+  // Scroll to CV when showing, but only if becoming visible
   useEffect(() => {
     if (showCV) {
       setTimeout(() => {
@@ -85,7 +82,7 @@ const Home = () => {
   }, [showCV]);
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
       {/* Banner */}
@@ -110,7 +107,7 @@ const Home = () => {
               About me
             </h1>
 
-            <div className="space-y-6 sm:space-y-8 text-[19px]  sm:text-[19px] leading-8 sm:leading-9 text-[#333] max-w-5xl">
+            <div className="space-y-4 text-lg leading-7 text-[#333] max-w-5xl">
               <p>
                 Senior Lecturer, Researcher, and Evaluation Consultant at the{" "}
                 <a href="https://www.unima.ac.mw"
@@ -184,76 +181,78 @@ const Home = () => {
                 and Standard Operating Procedures (SOPs) for Nutrition
                 Programmes during COVID-19.
               </p>
-               <div className="mt-10">
-  <h3 className="text-2xl sm:text-3xl font-bold text-[#222] mb-6">
-    Areas of Expertise
-  </h3>
 
-  <div className="border-gray-200 p-6">
-    <ul className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>
-          Programme and project monitoring and evaluation (baselines, midlines,
-          and endlines)
-        </span>
-      </li>
+              <div className="mt-8">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#222] mb-4">
+                  Areas of Expertise
+                </h3>
 
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>
-          Qualitative research: in-depth interviews (IDIs), key-informant
-          interviews (KIIs), photovoice, drawing-elicited interviews, focus
-          group discussions (FGDs), ethnographies, and stakeholder
-          consultations
-        </span>
-      </li>
+                <div className="border-gray-200 p-0">
+                  <ul className="space-y-2 text-lg leading-7 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>
+                        Programme and project monitoring and evaluation (baselines, midlines,
+                        and endlines)
+                      </span>
+                    </li>
 
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>Qualitative data management and analysis</span>
-      </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>
+                        Qualitative research: in-depth interviews (IDIs), key-informant
+                        interviews (KIIs), photovoice, drawing-elicited interviews, focus
+                        group discussions (FGDs), ethnographies, and stakeholder
+                        consultations
+                      </span>
+                    </li>
 
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>
-          Research team training, field supervision, and leadership
-        </span>
-      </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>Qualitative data management and analysis</span>
+                    </li>
 
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>
-          Stakeholder engagement and high-level consultation
-        </span>
-      </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>
+                        Research team training, field supervision, and leadership
+                      </span>
+                    </li>
 
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>
-          Evidence-based policy advising and report writing
-        </span>
-      </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>
+                        Stakeholder engagement and high-level consultation
+                      </span>
+                    </li>
 
-      <li className="flex items-start gap-3">
-        <span className="text-[#b44343] font-bold">•</span>
-        <span>
-          Microsoft Office Suite and qualitative data analysis software (NVivo)
-        </span>
-      </li>
-    </ul>
-  </div>
-</div>
-              {/* FIXED: Toggle button - shows "View CV" when hidden, "Hide CV" when shown */}
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>
+                        Evidence-based policy advising and report writing
+                      </span>
+                    </li>
+
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#b44343] font-bold">•</span>
+                      <span>
+                        Microsoft Office Suite and qualitative data analysis software (NVivo)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Toggle button - shows "View CV" when hidden, "Hide CV" when shown */}
               <button
                 onClick={toggleCV}
-                className="inline-block text-[#b44343] font-bold underline text-base sm:text-lg hover:text-rose-700"
+                className="inline-block text-[#b44343] font-bold underline text-base hover:text-rose-700 mt-2"
               >
-                {showCV ? "Hide CV" : "View Dr Mayeso Chinseu Lazaro  CV"}
+                {showCV ? "Hide CV" : "View Dr Mayeso Chinseu Lazaro CV"}
               </button>
             </div>
 
-            {/* CV SECTION - FIXED: Added a close button inside */}
+            {/* CV SECTION */}
             {showCV && (
               <section 
                 id="cv-section"
@@ -263,7 +262,6 @@ const Home = () => {
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#222]">
                     Curriculum Vitae
                   </h2>
-                  {/* FIXED: Added close button for CV */}
                   <button
                     onClick={toggleCV}
                     className="text-gray-400 hover:text-[#b44343] transition-colors"

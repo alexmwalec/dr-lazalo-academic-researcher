@@ -196,7 +196,7 @@ const Supervision = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
       {/* Banner */}
@@ -221,7 +221,7 @@ const Supervision = () => {
               Supervision
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
+            <p className="text-lg text-gray-700 mb-6 sm:mb-8 leading-7 font-['Arial',sans-serif]">
               Undergraduate, postgraduate supervision and external examination records.
             </p>
 
@@ -244,28 +244,28 @@ const Supervision = () => {
             </div>
 
             {/* List */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               {currentItems.length === 0 ? (
-                <div className="text-center py-10 text-gray-500 text-base">
+                <div className="text-center py-10 text-gray-500 text-lg">
                   No supervision records found for {selectedYear}.
                 </div>
               ) : (
                 currentItems.map((item, index) => (
                   <div
                     key={index}
-                    className="border-b border-gray-300 pb-4 sm:pb-5"
+                    className="border-b border-gray-300 pb-4"
                   >
                     {/* Status Badge - Different styling for different statuses */}
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="text-xs sm:text-sm text-gray-500">
+                      <span className="text-sm text-gray-500">
                         {item.year}
                       </span>
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                      <span className={`text-base px-2 py-0.5 rounded-full font-medium ${
                         item.isExternal 
-                          ? ' '
+                          ? ''
                           : item.status?.includes('Expected') 
-                            ? ''
-                            : ''
+                            ? 'text-base'
+                            : 'text-base'
                       }`}>
                         {item.status}
                       </span>
@@ -277,17 +277,17 @@ const Supervision = () => {
                         <h3 className="text-xl font-bold text-gray-900 mt-1">
                           {item.title}
                         </h3>
-                        <p className="text-gray-700 mt-1 text-sm sm:text-base">
+                        <p className="text-gray-700 mt-1 text-lg leading-7">
                           {item.description}
                         </p>
                       </>
                     ) : (
                       <>
-                        <p className="text-gray-900 font-medium mt-1 text-sm sm:text-base">
+                        <p className="text-gray-900 font-medium mt-1 text-lg leading-7">
                           <span className="text-gray-800 font-semibold">Student:</span>{" "}
                           {item.student}
                         </p>
-                        <p className="text-gray-900 mt-1 text-sm sm:text-base">
+                        <p className="text-gray-900 mt-1 text-lg leading-7">
                           <span className="text-gray-800 font-semibold">Title:</span>{" "}
                           {item.title}
                         </p>
@@ -300,7 +300,7 @@ const Supervision = () => {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-8 sm:mt-10 flex-wrap">
+              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-6 sm:mt-8 flex-wrap">
                 <button
                   onClick={() => setPage(Math.max(page - 1, 1))}
                   disabled={page === 1}
@@ -334,7 +334,7 @@ const Supervision = () => {
             )}
 
             {filteredData.length > 0 && (
-              <div className="text-center text-gray-600 mt-4 text-sm sm:text-base">
+              <div className="text-center text-gray-600 mt-4 text-lg">
                 Page {page} of {totalPages}
               </div>
             )}

@@ -6,11 +6,11 @@ import Footer from "../Footer/Footer";
 
 const Teaching = () => {
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
       {/* Banner */}
-       <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
+      <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
           src={humanity}
           alt="Academic Research Banner"
@@ -27,25 +27,25 @@ const Teaching = () => {
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
-            <h1 className="text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-3xl font-bold text-black mb-3 sm:mb-4">
               Teaching
             </h1>
 
-            <p className="text-base sm:text-lg text-black leading-7 sm:leading-8 mb-6 sm:mb-8">
+            <p className="text-lg text-black leading-7 mb-4 sm:mb-6">
               I have been teaching at the University of Malawi since 2008, at
               both undergraduate and postgraduate levels, in a range of thematic
               areas that focus on family studies, community development, research
               methodologies, early childhood development, and ageing.
             </p>
 
-            <div className="space-y-8 sm:space-y-10 text-black">
+            <div className="space-y-6 text-black">
 
               {/* Teaching and Research Areas */}
               <div>
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-[#b44343]">
+                <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-2 leading-snug">
                   Teaching and Research Areas
                 </h2>
-                <ol className="list-decimal ml-5 sm:ml-8 space-y-2 leading-7 sm:leading-8 text-sm sm:text-base">
+                <ol className="list-decimal ml-5 sm:ml-8 space-y-1 text-lg leading-7">
                   <li>Children, youth, and family well-being</li>
                   <li>Early Childhood Development (ECD) and education policy and practice</li>
                   <li>Ageing, intergenerational relations, and social support systems</li>
@@ -56,10 +56,10 @@ const Teaching = () => {
 
               {/* Undergraduate Courses */}
               <div>
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-[#b44343]">
+                <h2 className="text-xl sm:text-xl font-semibold text-[#b44343] mb-2 leading-snug">
                   Undergraduate Courses Taught
                 </h2>
-                <ol className="list-decimal ml-5 sm:ml-8 space-y-2 leading-7 sm:leading-8 text-sm sm:text-base">
+                <ol className="list-decimal ml-5 sm:ml-8 space-y-1 text-lg leading-7">
                   <li>Program Planning and Implementation (4th Year)</li>
                   <li>Program Monitoring and Evaluation (4th Year)</li>
                   <li>Entrepreneurship (4th Year)</li>
@@ -85,10 +85,10 @@ const Teaching = () => {
 
               {/* Postgraduate Teaching */}
               <div>
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-[#b44343]">
+                <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
                   Postgraduate Teaching
                 </h2>
-                <p className="leading-7 sm:leading-8 text-sm sm:text-base">
+                <p className="text-lg leading-7">
                   At the postgraduate level, I have taught the{" "}
                   Household Environmental Management, Food Science and Nutrition Seminar, and Research Methodologies modules
                 </p>

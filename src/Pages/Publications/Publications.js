@@ -34,7 +34,7 @@ const Publications = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
       {/* Banner */}
@@ -51,7 +51,7 @@ const Publications = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
  
-           <Sidebar />       
+          <Sidebar />       
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
@@ -59,14 +59,14 @@ const Publications = () => {
               Publications
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
+            <p className="text-lg text-gray-700 mb-6 sm:mb-8 leading-7">
               Peer-review articles and books in the thematic of Early Child Development (ECD)
               Early Child Education (ECE), older person and ageing, disability, education,
               food security, and digital sociology.
             </p>
 
             {/* Filter */}
-            <div className="mb-8 sm:mb-10">
+            <div className="mb-6 sm:mb-8">
               <label className="font-semibold mr-3 text-sm sm:text-base">
                 Filter by Year:
               </label>
@@ -87,28 +87,26 @@ const Publications = () => {
             </div>
 
             {/* Publications List */}
-            <div className="space-y-8 sm:space-y-10">
+            <div className="space-y-6">
               {currentItems.map((item) => (
                 <div
                   key={item.id}
-                  className="border-b border-gray-200 pb-6 sm:pb-8"
+                  className="border-b border-gray-200 pb-6"
                 >
                   <div className="text-xs sm:text-sm font-semibold text-amber-700 uppercase tracking-wide mb-2">
                     {item.year}
                   </div>
-
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-medium underline text-[#b44343] mb-3 leading-snug">
-                    {item.title}
-                  </h2>
-
-                  <div className="text-gray-700 text-xs sm:text-sm mb-2">
+                    <h2 className="text-lg sm:text-xl font-semibold text-[#b44343] mb-3 leading-snug">
+                      {item.title}
+                    </h2>
+                  <div className="text-gray-700 text-lg mb-2 leading-7">
                     <strong>Authors:</strong> {item.authors}
                   </div>
-                  <div className="text-gray-700 text-xs sm:text-sm leading-relaxed">
+                  <div className="text-gray-700 text-lg leading-7">
                     {item.publication}
                   </div>
 
-                  <div className="flex items-center gap-4 sm:gap-6 mt-4 flex-wrap">
+                  <div className="flex items-center gap-4 sm:gap-6 mt-3 flex-wrap">
                     <button
                       onClick={() => handleViewDetails(item.id)}
                       className="text-amber-700 text-sm font-medium hover:text-amber-800"
@@ -146,10 +144,10 @@ const Publications = () => {
                       {/* Co-Authors Section */}
                       {item.coAuthors && item.coAuthors.length > 0 && (
                         <div className="mb-4">
-                          <h3 className="font-semibold text-black mb-3 text-sm sm:text-base">
+                          <h3 className="font-semibold text-black mb-2 text-base">
                             Co-Authors
                           </h3>
-                          <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
+                          <ul className="space-y-1 text-lg text-gray-700 leading-7">
                             {item.coAuthors.map((author, index) => (
                               <li key={index}>• {author}</li>
                             ))}
@@ -160,10 +158,10 @@ const Publications = () => {
                       {/* Abstract Section */}
                       {item.abstract && (
                         <div>
-                          <h3 className="font-semibold text-black mb-3 text-sm sm:text-base">
+                          <h3 className="font-semibold text-black mb-2 text-base">
                             Abstract
                           </h3>
-                          <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                          <p className="text-lg text-gray-700 leading-7">
                             {item.abstract}
                           </p>
                         </div>
@@ -176,12 +174,12 @@ const Publications = () => {
 
             {/* Unpublished Works */}
             {currentPage === totalPages && (
-              <section className="mt-14">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+              <section className="mt-10">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                   Unpublished Works
                 </h2>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
 
                   {/* PhD Dissertation */}
                   <div className="border-b border-gray-200 pb-6">
@@ -194,15 +192,15 @@ const Publications = () => {
                       Invisible in Plain Sight?
                     </h3>
 
-                    <div className="text-gray-700 text-sm mb-2">
+                    <div className="text-gray-700 text-lg mb-2 leading-7">
                       <strong>Author:</strong> Lazaro, M. C.
                     </div>
 
-                    <div className="text-gray-700 text-sm leading-relaxed mb-3">
+                    <div className="text-gray-700 text-lg leading-7 mb-3">
                       University of Hull, United Kingdom.
                     </div>
 
-                    <div className="text-sm">
+                    <div className="text-lg leading-7">
                       <strong>Repository Link:</strong>{" "}
                       <a
                         href="https://hull-repository.worktribe.com/output/4220827"
@@ -226,15 +224,15 @@ const Publications = () => {
                       Two-Parent Families in Urban Malawi
                     </h3>
 
-                    <div className="text-gray-700 text-sm mb-2">
+                    <div className="text-gray-700 text-lg mb-2 leading-7">
                       <strong>Author:</strong> Lazaro, M. C.
                     </div>
 
-                    <div className="text-gray-700 text-sm leading-relaxed mb-3">
+                    <div className="text-gray-700 text-lg leading-7 mb-3">
                       University of Alberta, Canada.
                     </div>
 
-                    <div className="text-sm">
+                    <div className="text-lg leading-7">
                       <strong>DOI:</strong>{" "}
                       <a
                         href="https://doi.org/10.7939/R30D00"
@@ -253,7 +251,7 @@ const Publications = () => {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-8 sm:mt-10 flex-wrap">
+              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-6 sm:mt-8 flex-wrap">
                 <button
                   onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
