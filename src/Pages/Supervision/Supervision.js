@@ -163,7 +163,6 @@ const supervisionData = [
 ];
 
 const Supervision = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
   const [selectedYear, setSelectedYear] = useState('All');
   const [page, setPage] = useState(1);
 
@@ -191,7 +190,6 @@ const Supervision = () => {
   // Reset to page 1 when filter changes
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
-    setSelectedItem(null);
     setPage(1);
   };
 
