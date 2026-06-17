@@ -121,36 +121,33 @@ const Awards = () => {
 
               <ol className="list-decimal ml-5 sm:ml-8 space-y-4 text-black leading-7 sm:leading-8 text-sm sm:text-base">
                 <li>
-                  <strong>
+                
                     Interdisciplinary Doctor of Philosophy (PhD)
-                  </strong>
+                  
                   , Human Geography and Social Sciences, University of Hull,
                   United Kingdom, 2018.
                   <br />
-                  <span className="italic">
-                 – International
-                    Fee Bursary
-                  </span>
+    
                 </li>
 
                 <li>
-                  <strong>
+                
                     Postgraduate Certificate in Research Training
-                  </strong>
+                  
                   , University of Hull, United Kingdom, 2016.
                 </li>
 
                 <li>
-                  <strong>
+                
                     Master of Science (MSc) in Family Ecology and Practice
-                  </strong>
+                  
                   , University of Alberta, Canada, 2013.
                 </li>
 
                 <li>
-                  <strong>
+                
                     Bachelor of Education Humanities (with Credit)
-                  </strong>
+                  
                   , University of Malawi, Malawi, 2007.
                 </li>
               </ol>
@@ -163,40 +160,38 @@ const Awards = () => {
               </h2>
 
               <ol className="list-decimal ml-5 sm:ml-8 space-y-4 text-black leading-7 sm:leading-8 text-sm sm:text-base">
-                <li>
-                  <strong>University of Hull Studentship</strong>,
-                  <span className="italic"> Funded by the University of Hull Studentship</span> University of Hull, United Kingdom (2015–2018).
+                <li>University of Hull Studentship,<span> International Fee Bursary ,</span> University of Hull, United Kingdom (2015–2018).
                 </li>
 
                 <li>
-                  <strong>Mary Louise Imrie Graduate Student Award</strong>,
+                Mary Louise Imrie Graduate Student Award,
                   University of Alberta, Canada (January 2012).
                 </li>
 
                 <li>
-                  <strong>Louise Davies Memorial Graduate Scholarship</strong>,
+                Louise Davies Memorial Graduate Scholarship,
                   University of Alberta, Canada (September 2011).
                 </li>
 
                 <li>
-                  <strong>
+                
                     Engberg Graduate Scholarship in International Home Economics
-                  </strong>
+                  
                   , University of Alberta, Canada (September 2011).
                 </li>
 
                 <li>
-                  <strong>
+                
                     University of Alberta Graduate Students' Association
                     Professional Development Grant
-                  </strong>
+                  
                   , University of Alberta, Canada (December 21, 2012).
                 </li>
 
                 <li>
-                  <strong>
+                
                     Malawi Government Scholarship for Junior Staff Development
-                  </strong>{" "}
+                  {" "}
                   (July 2010 – August 2012).
                 </li>
               </ol>

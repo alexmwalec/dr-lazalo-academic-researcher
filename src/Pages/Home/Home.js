@@ -197,7 +197,7 @@ const Home = () => {
               About me
             </h1>
 
-            <div className="space-y-6 sm:space-y-8 text-[16px] sm:text-[18px] leading-8 sm:leading-9 text-[#333] max-w-5xl">
+            <div className="space-y-6 sm:space-y-8 text-[19px]  sm:text-[19px] leading-8 sm:leading-9 text-[#333] max-w-5xl">
               <p>
                 Senior Lecturer, Researcher, and Evaluation Consultant at the{" "}
                 <a href="https://www.unima.ac.mw"
@@ -336,7 +336,7 @@ const Home = () => {
                 onClick={toggleCV}
                 className="inline-block text-[#b44343] font-bold underline text-base sm:text-lg hover:text-rose-700"
               >
-                {showCV ? "Hide CV" : "View CV"}
+                {showCV ? "Hide CV" : "View Dr Mayeso Chinseu Lazaro  CV"}
               </button>
             </div>
 
