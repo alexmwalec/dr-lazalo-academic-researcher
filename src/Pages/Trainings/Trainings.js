@@ -9,6 +9,7 @@ import { SiOrcid, SiGooglescholar } from "react-icons/si";
 const Trainings = () => {
   const [selectedYear, setSelectedYear] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedItem, setSelectedItem] = useState(null); // FIXED: Added missing state
   const itemsPerPage = 7;
 
   const years = [
@@ -27,11 +28,15 @@ const Trainings = () => {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+ 
+  const handleViewDetails = (id) => { 
+    setSelectedItem(selectedItem === id ? null : id);
+  };
 
   return (
     <div className="min-h-screen bg-slate-100">
       <Header />
-              <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
+      <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
           src={humanity}
           alt="Academic Research Banner"
@@ -65,8 +70,7 @@ const Trainings = () => {
                 Senior Lecturer, Researcher and Evaluation Consultant
               </p>
 
-              
-                <a href="mailto:mlazaro@unima.ac.mw"
+              <a href="mailto:mlazaro@unima.ac.mw"
                 className="block mt-4 lg:mt-8 text-[#b44343] underline text-sm sm:text-base break-all"
               >
                 mlazaro@unima.ac.mw
@@ -80,51 +84,50 @@ const Trainings = () => {
 
               {/* Social Links */}
               <div className="mt-4 lg:mt-8 space-y-3 flex flex-col items-center lg:items-start">
-  <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start">
 
-    <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
-    >
-      <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
-      Google Scholar
-    </a>
+                  <a href="https://scholar.google.com/citations?hl=en&user=5BMNX2sAAAAJ"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base"
+                  >
+                    <SiGooglescholar className="text-[#4285F4] text-lg flex-shrink-0 w-5" />
+                    Google Scholar
+                  </a>
 
-    <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
-      ResearchGate
-    </a>
+                  <a href="https://www.researchgate.net/profile/Mayeso-Lazaro-2"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaResearchgate className="text-[#00CCBB] text-lg flex-shrink-0 w-5" />
+                    ResearchGate
+                  </a>
 
-    <a href="https://orcid.org/0000-0001-5314-0638"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
-      ORCID
-    </a>
+                  <a href="https://orcid.org/0000-0001-5314-0638"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <SiOrcid className="text-[#A6CE39] text-lg flex-shrink-0 w-5" />
+                    ORCID
+                  </a>
 
-    <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
-      LinkedIn
-    </a>
+                  <a href="http://www.linkedin.com/in/mayeso-chinseu-lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaLinkedinIn className="text-[#0A66C2] text-lg flex-shrink-0 w-5" />
+                    LinkedIn
+                  </a>
 
-    <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
-    >
-      <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
-      Institutional Web Page
-    </a>
+                  <a href="https://unima.ac.mw/people/staff/search?staff=dr.+mayeso+chinseu+lazaro"
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-[#b44343] underline text-sm sm:text-base mt-3"
+                  >
+                    <FaGlobe className="text-[#34A853] text-lg flex-shrink-0 w-5" />
+                    Institutional Web Page
+                  </a>
 
-  </div>
-
-            </div>
+                </div>
+              </div>
             </div>
           </aside>
 
@@ -172,7 +175,7 @@ const Trainings = () => {
                     {item.year}
                   </div>
 
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-medium  text-[#b44343] mb-3 leading-snug">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-[#b44343] mb-3 leading-snug">
                     {item.title}
                   </h2>
 
@@ -187,6 +190,32 @@ const Trainings = () => {
                   <div className="text-gray-700 text-xs sm:text-sm">
                     <strong>Date:</strong> {item.date}
                   </div>
+
+                  <div className="flex items-center gap-4 sm:gap-6 mt-4 ">
+                    <button
+                      onClick={() => handleViewDetails(item.id)}
+                      className="text-amber-700 text-sm font-medium hover:text-amber-800"
+                    >
+                      {selectedItem === item.id
+                        ? "Hide Details"
+                        : "View Details"}
+                    </button>
+                  </div>
+
+                  {selectedItem === item.id && (
+                    <div className="mt-4 sm:mt-6">
+                      {item.description && (
+                        <div>
+                          <h3 className="font-semibold text-black mb-2 text-sm sm:text-base">
+                            Description
+                          </h3>
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

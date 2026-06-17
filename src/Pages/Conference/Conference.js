@@ -156,7 +156,7 @@ const Conference = () => {
                 value={selectedYear}
                 onChange={(e) => {
                   setSelectedYear(e.target.value);
-                  setSelectedItem(null); // Close any open details when filtering
+                  setSelectedItem(null); 
                 }}
                 className="border border-gray-300 px-3 py-2 rounded-md bg-white text-sm sm:text-base mt-2 sm:mt-0"
               >
