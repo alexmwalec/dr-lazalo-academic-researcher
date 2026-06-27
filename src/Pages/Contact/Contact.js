@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch("http://mayeso-lazalo-academic-researcher.vercel.app/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -45,7 +45,7 @@ const Contact = () => {
     <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
 
-      {/* Banner */}
+      {/* Banner */} 
       <div className="relative h-[200px] sm:h-[260px] md:h-[330px] w-full">
         <img
           src={humanity}
