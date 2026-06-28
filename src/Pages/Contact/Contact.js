@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://mayeso-lazalo-academic-researcher.vercel.app/contact", {
+      const response = await fetch("https://mayeso-chinseu-lazaro-backend.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
