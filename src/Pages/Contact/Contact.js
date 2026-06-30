@@ -29,14 +29,13 @@ const Contact = () => {
       });
       const data = await response.json();
       if (data.success) {
-        alert("Message sent successfully!");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         alert(data.message || "Failed to send message");
       }
     } catch (error) {
       console.error(error);
-      alert("Server error. Please try again.");
+      alert("Server error. Try again");
     }
     setLoading(false);
   };
@@ -59,7 +58,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
-          <Sidebar />
+          <Sidebar /> 
 
           {/* Main Content */}
           <main className="flex-1 py-6 lg:py-12">
