@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Sidebar from "../Sidebar/Sidebar";
@@ -13,6 +13,16 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const successTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (successTimeoutRef.current) {
+        clearTimeout(successTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,6 +31,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setSuccessMessage("");
+    if (successTimeoutRef.current) {
+      clearTimeout(successTimeoutRef.current);
+    }
     try {
       const response = await fetch("https://mayeso-chinseu-lazaro-backend.onrender.com/contact", {
         method: "POST",
@@ -30,6 +44,10 @@ const Contact = () => {
       const data = await response.json();
       if (data.success) {
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setSuccessMessage("Message has been sent successfully");
+        successTimeoutRef.current = setTimeout(() => {
+          setSuccessMessage("");
+        }, 1000);
       } else {
         alert(data.message || "Failed to send message");
       }
@@ -139,6 +157,11 @@ const Contact = () => {
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
+                {successMessage && (
+                  <p className="text-green-600 font-bold">
+                    {successMessage}
+                  </p>
+                )}
 
               </form>
             </div>
