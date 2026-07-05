@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const navLinks = [
-  { to: "/awards", label: "Education" },
+  { to: "/awards", label: "Education & Awards" },
   { to: "/teaching", label: "Teaching" },
   { to: "/supervision", label: "Supervision" },
   { to: "/projects", label: "Projects" },
@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex flex-wrap items-start justify-between gap-y-2 px-6 pt-3 pb-4">
 
         <div className="flex items-center gap-3">
           {/* Mobile Hamburger Button */}
@@ -45,14 +45,14 @@ const Header = () => {
           {/* Name / Logo */}
           <Link
             to="/"
-            className="text-xl sm:text-2xl font-bold  mb-3 leading-snug whitespace-nowrap hover:text-rose-700"
+            className="text-xl sm:text-2xl font-bold leading-tight whitespace-nowrap hover:text-rose-700"
           >
             Mayeso Chinseu Lazaro
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6 text-[19px] font-medium">
+        <nav className="hidden lg:flex max-[1800px]:w-full flex-wrap items-center gap-x-6 gap-y-2 max-[1800px]:pt-1 text-[19px] font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.to}
