@@ -3,16 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const navLinks = [
+  { to: "/awards", label: "Education" },
+  { to: "/teaching", label: "Teaching" },
+  { to: "/supervision", label: "Supervision" },
   { to: "/projects", label: "Projects" },
   { to: "/publications", label: "Publications" },
-  { to: "/consultancy", label: "Consultancy" },
-  { to: "/awards", label: "Awards" },
-  { to: "/supervision", label: "Supervision" },
-  { to: "/teaching", label: "Teaching" },
-  { to: "/board-membership", label: "Board Membership" },
   { to: "/peer-review", label: "Peer Reviews" },
-  { to: "/conference", label: "Conference Contribution" },
-  { to: "/trainings", label: "Trainings" },
+  { to: "/consultancy", label: "Consultancy" },
+  { to: '/conference', label: 'Conferences'},
+  { to: "/trainings", label: "Training & Workshops"},
+  { to: "/board-membership", label: "Memberships" },
   { to: "/contact", label: "Contact" },
 ];
 

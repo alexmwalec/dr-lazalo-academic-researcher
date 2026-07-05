@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Sidebar from "../Sidebar/Sidebar";
@@ -13,13 +14,14 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const successTimeoutRef = useRef(null);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState("");
+  const statusTimeoutRef = useRef(null);
 
   useEffect(() => {
     return () => {
-      if (successTimeoutRef.current) {
-        clearTimeout(successTimeoutRef.current);
+      if (statusTimeoutRef.current) {
+        clearTimeout(statusTimeoutRef.current);
       }
     };
   }, []);
@@ -28,36 +30,84 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccessMessage("");
-    if (successTimeoutRef.current) {
-      clearTimeout(successTimeoutRef.current);
-    }
-    try {
-      const response = await fetch("https://mayeso-chinseu-lazaro-backend.onrender.com/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      if (data.success) {
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setSuccessMessage("Message has been sent successfully");
-        successTimeoutRef.current = setTimeout(() => {
-          setSuccessMessage("");
-        }, 1000);
-      } else {
-        alert(data.message || "Failed to send message");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Server error. Try again");
-    }
-    setLoading(false);
-  };
+ const showStatus = (message, type, hideAfter = 4000) => {
+  if (statusTimeoutRef.current) {
+    clearTimeout(statusTimeoutRef.current);
+  }
 
+  setStatusMessage(message);
+  setStatusType(type);
+
+  if (hideAfter > 0) {
+    statusTimeoutRef.current = setTimeout(() => {
+      setStatusMessage("");
+      setStatusType("");
+    }, hideAfter);
+  }
+};
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (
+    !formData.name.trim() ||
+    !formData.email.trim() ||
+    !formData.subject.trim() ||
+    !formData.message.trim()
+  ) {
+    showStatus("Please fill in all fields", "error");
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(formData.email)) {
+    showStatus("Please enter a valid email address", "error");
+    return;
+  }
+
+  setLoading(true);
+  showStatus("Sending message...", "loading", 0);
+
+  try {
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_name: "Mayeso Lazaro",
+    };
+
+    const response = await emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    );
+
+    if (response.status === 200) {
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      showStatus("Message has been sent successfully!", "success", 4000);
+    } else {
+      showStatus("Failed to send message", "error", 4000);
+    }
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    showStatus(
+      "Unable to send message at the moment. Please try again later.",
+      "error",
+      4000
+    );
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <div className="min-h-screen bg-slate-100 font-['Arial',sans-serif]">
       <Header />
@@ -157,9 +207,17 @@ const Contact = () => {
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
-                {successMessage && (
-                  <p className="text-green-600 font-bold">
-                    {successMessage}
+                {statusMessage && (
+                  <p
+                    className={`font-bold ${
+                      statusType === "success"
+                        ? "text-green-600"
+                        : statusType === "error"
+                        ? "text-red-600"
+                        : "text-gray-600"
+                    }`}
+                  >
+                    {statusMessage}
                   </p>
                 )}
 
