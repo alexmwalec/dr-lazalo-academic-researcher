@@ -13,7 +13,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 const Home = () => {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
   const [containerWidth, setContainerWidth] = useState(800);
   const [showCV, setShowCV] = useState(false);
   const containerRef = useRef(null);
@@ -56,17 +55,8 @@ const Home = () => {
     setNumPages(numPages);
   };
 
-  const goToPrevPage = () =>
-    setPageNumber((prev) => Math.max(prev - 1, 1));
-
-  const goToNextPage = () =>
-    setPageNumber((prev) => Math.min(prev + 1, numPages));
-
   const toggleCV = () => {
     setShowCV(!showCV);
-    if (showCV) {
-      setPageNumber(1);
-    }
   };
 
   // Scroll to CV when showing, but only if becoming visible
@@ -105,7 +95,7 @@ const Home = () => {
           <main className="flex-1 py-6 lg:py-12">
             <h1 className="text-2xl sm:text-3xl font-bold text-[#222] mb-4 sm:mb-5">
               About me
-            </h1>
+            </h1> 
 
             <div className="space-y-4 text-lg leading-7 text-[#333] max-w-5xl">
               <p>
@@ -252,7 +242,7 @@ const Home = () => {
               </button>
             </div>
 
-            {/* CV SECTION */}
+            {/* CV SECTION - Vertical continuous layout */}
             {showCV && (
               <section 
                 id="cv-section"
@@ -286,53 +276,41 @@ const Home = () => {
                       Mayeso Chinseu Lazaro &nbsp;•&nbsp; View Only
                     </div>
                   </div>
-
-                  <Document
-                    file={cvFile}
-                    onLoadSuccess={onDocumentLoadSuccess}
-                    loading={
-                      <div className="text-center py-20 text-gray-500">
-                        Loading CV...
-                      </div>
-                    }
-                    error={
-                      <div className="text-center py-20 text-red-500">
-                        Failed to load CV.
-                      </div>
-                    }
-                  >
-                    <Page
-                      pageNumber={pageNumber}
-                      width={Math.min(containerWidth - 16, 900)}
-                      renderTextLayer={false}
-                      renderAnnotationLayer={false}
-                    />
-                  </Document>
-
-                  {/* Navigation */}
-                  {numPages && (
-                    <div className="flex justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 flex-wrap">
-                      <button
-                        onClick={goToPrevPage}
-                        disabled={pageNumber <= 1}
-                        className="px-3 sm:px-4 py-2 border rounded-md bg-white disabled:opacity-50 text-sm hover:bg-gray-50 transition-colors"
-                      >
-                        Previous
-                      </button>
-
-                      <span className="text-sm sm:text-base text-gray-700">
-                        Page {pageNumber} of {numPages}
-                      </span>
-
-                      <button
-                        onClick={goToNextPage}
-                        disabled={pageNumber >= numPages}
-                        className="px-3 sm:px-4 py-2 border rounded-md bg-white disabled:opacity-50 text-sm hover:bg-gray-50 transition-colors"
-                      >
-                        Next
-                      </button>
-                    </div>
-                  )}
+                  
+                  {/* Removed overflow container - now natural scrolling */}
+                  <div className="flex justify-center rounded-md">
+                    <Document
+                      file={cvFile}
+                      onLoadSuccess={onDocumentLoadSuccess}
+                      loading={
+                        <div className="text-center py-20 text-gray-500">
+                          Loading CV...
+                        </div>
+                      }
+                      error={
+                        <div className="text-center py-20 text-red-500">
+                          Failed to load CV.
+                        </div>
+                      }
+                    >
+                      {/* Render ALL pages vertically */}
+                      {numPages && 
+                        Array.from(new Array(numPages), (el, index) => (
+                          <div key={`page_${index + 1}`} className="mb-4 last:mb-0">
+                            <Page
+                              pageNumber={index + 1}
+                              width={Math.min(containerWidth - 16, 900)}
+                              renderTextLayer={false}
+                              renderAnnotationLayer={false}
+                            />
+                            {index < numPages - 1 && (
+                              <div className="border-b border-gray-200 my-2"></div>
+                            )}
+                          </div>
+                        ))
+                      }
+                    </Document>
+                  </div>
                 </div>
               </section>
             )}
