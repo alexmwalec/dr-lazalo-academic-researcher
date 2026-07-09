@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes,Route} from 'react-router-dom';
 import Awards from './Pages/Awards/awards';
 import Publications from './Pages/Publications/Publications';
-import Education from './Pages/Education/Education';
 import Constultancy from "./Pages/Consultancy/Consultancy";
 import Contact from './Pages/Contact/Contact';
 import Grants from "./Pages/Grants/Grants"
@@ -30,7 +29,6 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/awards" element={<Awards />} />
         <Route path="/publications" element={<Publications />} />
-        <Route path="/education" element={<Education />} />
         <Route path="/consultancy" element={<Constultancy />} />
         <Route path="/grants" element={<Grants />} />
         <Route path="/projects" element={<Projects />} />
