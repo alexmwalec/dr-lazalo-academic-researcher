@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedinIn, FaResearchgate, FaGlobe } from "react-icons/fa";
 import { SiOrcid, SiGooglescholar } from "react-icons/si";
+import Thanda from "../../Images/Thanda.jpeg"
 
 const Sidebar = () => {
   const socialLinks = [
@@ -32,11 +33,11 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-full lg:w-[280px] lg:-mt-24 flex flex-col items-center lg:items-start">
+    <aside className="relative z-10 w-full lg:w-[280px] lg:-mt-24 flex flex-col items-center lg:items-start">
       {/* Profile Image */}
       <div className="mt-[-60px] lg:mt-0">
         <img
-          src="/profile.jpg"
+          src={Thanda}
           alt="Mayeso Lazaro"
           className="w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[220px] lg:h-[220px] rounded-full border-4 border-white shadow-lg object-cover"
         />
